@@ -1,6 +1,7 @@
 package productManagementObjects;
 
 import java.time.Duration;
+import java.util.Properties;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -162,9 +163,10 @@ public class ProductPage extends BasePage {
 	WebElement policyUpdateMessage;
 
 	// add stationary
-	public void addStationaryProduct(String name, String price) {
+	public void addStationaryProduct(String name, String price, String imagePath) {
 		//wait.visibilityOf(loginSuccessMessage, 5);
 		driver.navigate().refresh();
+		Properties p= new Properties();
 		btnAddProduct.click();
 		txtProductname.sendKeys(name);
 		Select select = new Select(selectStationery);
@@ -172,8 +174,8 @@ public class ProductPage extends BasePage {
 		txtDescription.click();
 		txtDescription.sendKeys(name);
 
-		String src = "/home/docme/Downloads/download.jpeg";
-		addProductImage.sendKeys(src);
+		
+		addProductImage.sendKeys(imagePath);
 
 		clickItemCategory.click();
 		selectStationaryType.click();
@@ -217,7 +219,7 @@ public class ProductPage extends BasePage {
 		return msg.getText();
 	}
 
-	public void addUniformProduct(String name, String price) {
+	public void addUniformProduct(String name, String price,String imagePath,String chartImage) {
 		wait.visibilityOf(loginSuccessMessage, 5);
 		btnAddProduct.click();
 		txtProductname.sendKeys(name);
@@ -225,12 +227,8 @@ public class ProductPage extends BasePage {
 		select.selectByVisibleText("Uniform");
 		txtDescription.click();
 		txtDescription.sendKeys(name);
-
-		String src = "/home/docme/Downloads/download (1).jpeg";
-		addProductImage.sendKeys(src);
-
-		String src1 = "/home/docme/Downloads/download (2).jpeg";
-		addSizeChart.sendKeys(src1);
+		addProductImage.sendKeys(imagePath);
+		addSizeChart.sendKeys(chartImage);
 
 		addVideoUrl.sendKeys("https://youtube.com/shorts/X5xLb-qrB5w?si=z_fhxBM7U6krFns2");
 

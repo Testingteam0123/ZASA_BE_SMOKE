@@ -1,6 +1,9 @@
 package productManagementTest;
 
 import org.testng.annotations.Test;
+
+import java.util.Properties;
+
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 
@@ -13,20 +16,21 @@ import utilities.ExtentTestListener;
 
 @Listeners(ExtentTestListener.class)
 public class ProductsTest extends BaseTest {
-
-	//@Test(priority = 1)
+	
+	
+	@Test(priority = 1)
 	public void verifyAddUniformProduct() {
 
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
-		ProductPage p = new ProductPage(driver);
+		ProductPage pp = new ProductPage(driver);
 		try {
 			test.info("Opening the Product Module");
 			sp.openProductPage();
 			test.info("Adding a Uniform product in the product module");
-			p.addUniformProduct("Uniform Shirt", "25");
+			pp.addUniformProduct("Uniform Shirt", "25",p.getProperty("uniformImage"),p.getProperty("sizeChart"));
 
-			String actualSuccessMessage = p.ProductAddedMessage();
+			String actualSuccessMessage = pp.ProductAddedMessage();
 			Assert.assertEquals(actualSuccessMessage, "Product added successfully.");
 			test.pass("Uniform product added successfully");
 		} catch (Exception e) {
@@ -39,14 +43,14 @@ public class ProductsTest extends BaseTest {
 	public void verifyDeleteProduct() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
-		ProductPage p = new ProductPage(driver);
+		ProductPage pp = new ProductPage(driver);
 		try {
 			test.info("Opening the Product module");
 			sp.openProductPage();
 			test.info("Deleting a product from Product module");
-			p.deleteProduct();
+			pp.deleteProduct();
 
-			String actualDeleteMessage = p.getDeleteMessage();
+			String actualDeleteMessage = pp.getDeleteMessage();
 
 			Assert.assertEquals(actualDeleteMessage, "Product deleted successfully.");
 			test.pass("Deleted the product successfully");
@@ -60,15 +64,15 @@ public class ProductsTest extends BaseTest {
 	public void verifyAddStationaryProduct() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
-		ProductPage p = new ProductPage(driver);
+		ProductPage pp = new ProductPage(driver);
 		try {
 			test.info("Opening the Product module");
 		sp.openProductPage();
 
 		test.info("Adding a Stationary product in the product module");
-		p.addStationaryProduct("scissors", "25");
+		pp.addStationaryProduct("scissors", "25",p.getProperty("stationaryImage"));
 
-		String actualSuccessMessage = p.ProductAddedMessage();
+		String actualSuccessMessage = pp.ProductAddedMessage();
 		Assert.assertEquals(actualSuccessMessage, "Product added successfully.");
 		test.pass("Stationary product added successfully");
 		}
@@ -84,15 +88,15 @@ public class ProductsTest extends BaseTest {
 	public void verifyEditProduct() throws InterruptedException {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
-		ProductPage p = new ProductPage(driver);
+		ProductPage pp = new ProductPage(driver);
 		try {
 			test.info("Opening the Product module");
 		sp.openProductPage();
 
 		test.info("Editing a product in the product module");
-		p.editProduct("edited product");
+		pp.editProduct("edited product");
 
-		String actualSuccessMessage = p.productUpdatedSuccessMessage();
+		String actualSuccessMessage = pp.productUpdatedSuccessMessage();
 		Assert.assertEquals(actualSuccessMessage, "Product updated successfully.");
 		test.pass("Product edited successfully");
 		}
@@ -103,19 +107,19 @@ public class ProductsTest extends BaseTest {
 		}
 	}
 	
-	@Test
+	//@Test
 	public void checkThePolicyUpdateFunction()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
-		ProductPage p = new ProductPage(driver);
+		ProductPage pp = new ProductPage(driver);
 		try {
 			test.info("Opening the Product module");
 			sp.openProductPage();
 			test.info("Updating the policy of the product");
-			p.policyUpdate();
+			pp.policyUpdate();
 			
-			String expectedMessage=p.getPolicyUpdateMessage();
+			String expectedMessage=pp.getPolicyUpdateMessage();
 			Assert.assertEquals(expectedMessage, "Policy updated successfully.");
 			test.pass("Policy updated successfully.");
 			

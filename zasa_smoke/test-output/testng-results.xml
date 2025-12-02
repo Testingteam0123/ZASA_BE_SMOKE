@@ -1,29 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-02T13:42:09 IST" name="Default suite" finished-at="2025-12-02T13:42:15 IST" duration-ms="6060">
+  <suite started-at="2025-12-02T14:37:34 IST" name="Default suite" finished-at="2025-12-02T14:37:43 IST" duration-ms="9846">
     <groups>
     </groups>
-    <test started-at="2025-12-02T13:42:09 IST" name="Default test" finished-at="2025-12-02T13:42:15 IST" duration-ms="6060">
-      <class name="stockManagementTest.MarkDeadStockTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:stockManagementTest.MarkDeadStockTest@175c2241]" started-at="2025-12-02T13:42:10 IST" name="setup" finished-at="2025-12-02T13:42:13 IST" duration-ms="3206" status="PASS">
+    <test started-at="2025-12-02T14:37:34 IST" name="Default test" finished-at="2025-12-02T14:37:43 IST" duration-ms="9846">
+      <class name="productManagementTest.ProductsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:productManagementTest.ProductsTest@5b7a5baa]" started-at="2025-12-02T14:37:34 IST" name="setup" finished-at="2025-12-02T14:37:37 IST" duration-ms="2705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyMarkDeadStock()[pri:1, instance:stockManagementTest.MarkDeadStockTest@175c2241]" started-at="2025-12-02T13:42:13 IST" name="verifyMarkDeadStock" finished-at="2025-12-02T13:42:14 IST" duration-ms="940" status="PASS">
+        <test-method signature="verifyAddUniformProduct()[pri:1, instance:productManagementTest.ProductsTest@5b7a5baa]" started-at="2025-12-02T14:37:37 IST" name="verifyAddUniformProduct" finished-at="2025-12-02T14:37:43 IST" duration-ms="6891" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyMarkDeadStock -->
-        <test-method signature="verifyAddMarkDeadFunctionality()[pri:2, instance:stockManagementTest.MarkDeadStockTest@175c2241]" started-at="2025-12-02T13:42:14 IST" name="verifyAddMarkDeadFunctionality" finished-at="2025-12-02T13:42:15 IST" duration-ms="893" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyAddMarkDeadFunctionality -->
-        <test-method signature="verifyStockSummaryHistory()[pri:3, instance:stockManagementTest.MarkDeadStockTest@175c2241]" started-at="2025-12-02T13:42:15 IST" name="verifyStockSummaryHistory" finished-at="2025-12-02T13:42:15 IST" duration-ms="702" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyStockSummaryHistory -->
-      </class> <!-- stockManagementTest.MarkDeadStockTest -->
+        </test-method> <!-- verifyAddUniformProduct -->
+      </class> <!-- productManagementTest.ProductsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
