@@ -2,7 +2,6 @@ package productManagementTest;
 
 import org.testng.annotations.Test;
 
-import java.util.Properties;
 
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
@@ -130,5 +129,7 @@ public class ProductsTest extends BaseTest {
 			throw e;
 		}
 	}
+	
+	
 
 }
