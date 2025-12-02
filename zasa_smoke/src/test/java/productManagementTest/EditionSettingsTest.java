@@ -2,6 +2,9 @@ package productManagementTest;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
@@ -47,12 +50,12 @@ public class EditionSettingsTest extends BaseTest{
 		es.createEdition(editionName);
 		
 		String expectedMessage=es.getEditionAddedMessage();
-		Assert.assertEquals(expectedMessage, "Edition added successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Edition added successfully.");
 		test.pass("Edition year added successfully.");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	    	throw e;
 		}
 	}
@@ -73,12 +76,12 @@ public class EditionSettingsTest extends BaseTest{
 			
 		es.editEdition("2002");
 		String expectedMessage=es.getEditionUpdatedMessage();
-		Assert.assertEquals(expectedMessage, "Edition updated successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Edition updated successfully.");
 		test.pass("Edition year updated successfully.");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	    	throw e;
 		}
 	}
@@ -98,12 +101,12 @@ public class EditionSettingsTest extends BaseTest{
 		es.deleteEdition();
 		
 		String expectedMessage=es.getEditionDeletedMessage();
-		Assert.assertEquals(expectedMessage, "Edition deleted successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Edition deleted successfully.");
 		test.pass("Edition year deleted successfully.");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	    	throw e;
 		}
 		

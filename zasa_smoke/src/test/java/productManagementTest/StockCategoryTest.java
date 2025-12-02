@@ -3,6 +3,9 @@ package productManagementTest;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
@@ -46,12 +49,12 @@ public class StockCategoryTest extends BaseTest{
 	       test.info("Adding the stock category");
 		sc.addStockCategory(name, address);
 		String expectedMessage=sc.getStockAddedMessage();
-		Assert.assertEquals(expectedMessage, "Stock Category added successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Stock Category added successfully.");
 		test.pass("Stock Category added successfully.");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	        throw e;  
 		}
 	}

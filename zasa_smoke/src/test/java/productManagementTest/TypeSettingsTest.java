@@ -3,6 +3,9 @@ package productManagementTest;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
@@ -46,14 +49,14 @@ public class TypeSettingsTest extends BaseTest{
 	       test.info("Adding the new type");
 		ts.verifyAddNewType(typedata);	
 		String expectedMessage=ts.getTypeAddedMessage();
-		Assert.assertEquals(expectedMessage, "Type added successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Type added successfully.");
 		
 		
 		test.pass("Type added successfully");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	        throw e; 
 		}
 	}
@@ -73,13 +76,13 @@ public class TypeSettingsTest extends BaseTest{
 		ts.verifyEditType(typedata);
 		
 		String expectedMessage=ts.getTypeUpdatedMessage();
-		Assert.assertEquals(expectedMessage, "Type updated successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Type updated successfully.");
 		
 		test.pass("Type edited successfully");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	        throw e; 
 		}
 		
@@ -100,12 +103,12 @@ public class TypeSettingsTest extends BaseTest{
 	    test.info("Deleting the type");
 		ts.verifyDeleteType();
 		String expectedMessage=ts.getTypeDeletedMessage();
-		Assert.assertEquals(expectedMessage, "Type deleted successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Type deleted successfully.");
 		test.pass("Type deleted successfully");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	        throw e; 
 		}
 	}

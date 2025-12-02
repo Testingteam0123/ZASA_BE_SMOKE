@@ -1,0 +1,302 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>21/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Dec 02 12:16:03 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>72 seconds (72206 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='productManagementTest.ColorSettingsTest.verifyEditColor()'><b>verifyEditColor</b><br>Test class: productManagementTest.ColorSettingsTest</td>
+<td><div><pre>java.lang.AssertionError: Failedelement click intercepted: Element &lt;button type=&quot;button&quot; role=&quot;switch&quot; aria-checked=&quot;true&quot; data-state=&quot;checked&quot; value=&quot;on&quot; class=&quot;peer inline-flex h-[1.15rem] w-8 shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none data-[state=checked]:bg-[#966AC3] data-[state=unchecked]:bg-gray-300 focus-visible:ring-2 focus-visible:ring-[#966AC3] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer&quot;&gt;...&lt;/button&gt; is not clickable at point (1134, 338). Other element would receive the click: &lt;button class=&quot;inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;amp;_svg]:pointer-events-none [&amp;amp;_svg:not([class*=&apos;size-&apos;])]:size-4 shrink-0 [&amp;amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 has-[&gt;svg]:px-3 text-[#966AC3] border-[#966AC3] min-w-[100px] py-5&quot; type=&quot;button&quot; data-slot=&quot;sheet-close&quot;&gt;...&lt;/button&gt;
+  (Session info: chrome=130.0.6723.58)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-139-generic&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad905294218eeb4d13a9e80fa137d399, clickElement {id=f.DCFBFC643114AA568DB3656130D86835.d.B6CAB2E46EBE01D027179BCCC8F140D4.e.91}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46771/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (ad905294218eeb4d13a9e80fa137d399)] -&gt; xpath: (//button[@role=&apos;switch&apos;])[1]]
+Session ID: ad905294218eeb4d13a9e80fa137d399
+	at productManagementTest.ColorSettingsTest.verifyEditColor(ColorSettingsTest.java:82)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1291486201", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1291486201'><pre>java.lang.AssertionError: Failedelement click intercepted: Element &lt;button type=&quot;button&quot; role=&quot;switch&quot; aria-checked=&quot;true&quot; data-state=&quot;checked&quot; value=&quot;on&quot; class=&quot;peer inline-flex h-[1.15rem] w-8 shrink-0 items-center rounded-full border border-transparent shadow-xs transition-all outline-none data-[state=checked]:bg-[#966AC3] data-[state=unchecked]:bg-gray-300 focus-visible:ring-2 focus-visible:ring-[#966AC3] disabled:cursor-not-allowed disabled:opacity-50 cursor-pointer&quot;&gt;...&lt;/button&gt; is not clickable at point (1134, 338). Other element would receive the click: &lt;button class=&quot;inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&amp;amp;_svg]:pointer-events-none [&amp;amp;_svg:not([class*=&apos;size-&apos;])]:size-4 shrink-0 [&amp;amp;_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50 h-9 px-4 has-[&gt;svg]:px-3 text-[#966AC3] border-[#966AC3] min-w-[100px] py-5&quot; type=&quot;button&quot; data-slot=&quot;sheet-close&quot;&gt;...&lt;/button&gt;
+  (Session info: chrome=130.0.6723.58)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-139-generic&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad905294218eeb4d13a9e80fa137d399, clickElement {id=f.DCFBFC643114AA568DB3656130D86835.d.B6CAB2E46EBE01D027179BCCC8F140D4.e.91}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46771/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (ad905294218eeb4d13a9e80fa137d399)] -&gt; xpath: (//button[@role=&apos;switch&apos;])[1]]
+Session ID: ad905294218eeb4d13a9e80fa137d399
+	at org.testng.Assert.fail(Assert.java:111)
+	at productManagementTest.ColorSettingsTest.verifyEditColor(ColorSettingsTest.java:82)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>2</td>
+<td>productManagementTest.ColorSettingsTest@6f03482</td></tr>
+<tr>
+<td title='productManagementTest.ColorSettingsTest.verifyDeleteColor()'><b>verifyDeleteColor</b><br>Test class: productManagementTest.ColorSettingsTest</td>
+<td><div><pre>java.lang.AssertionError: Failedelement click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (124, 169). Other element would receive the click: &lt;div data-state=&quot;open&quot; data-slot=&quot;sheet-overlay&quot; class=&quot;data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50&quot; data-aria-hidden=&quot;true&quot; aria-hidden=&quot;true&quot; style=&quot;pointer-events: auto;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=130.0.6723.58)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-139-generic&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad905294218eeb4d13a9e80fa137d399, clickElement {id=f.DCFBFC643114AA568DB3656130D86835.d.B6CAB2E46EBE01D027179BCCC8F140D4.e.35}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46771/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (ad905294218eeb4d13a9e80fa137d399)] -&gt; xpath: //span[text()=&apos;Product Management&apos;]]
+Session ID: ad905294218eeb4d13a9e80fa137d399
+	at productManagementTest.ColorSettingsTest.verifyDeleteColor(ColorSettingsTest.java:104)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 26 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1353406178", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1353406178'><pre>java.lang.AssertionError: Failedelement click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (124, 169). Other element would receive the click: &lt;div data-state=&quot;open&quot; data-slot=&quot;sheet-overlay&quot; class=&quot;data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50&quot; data-aria-hidden=&quot;true&quot; aria-hidden=&quot;true&quot; style=&quot;pointer-events: auto;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=130.0.6723.58)
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-139-generic&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [ad905294218eeb4d13a9e80fa137d399, clickElement {id=f.DCFBFC643114AA568DB3656130D86835.d.B6CAB2E46EBE01D027179BCCC8F140D4.e.35}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46771}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:46771/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (ad905294218eeb4d13a9e80fa137d399)] -&gt; xpath: //span[text()=&apos;Product Management&apos;]]
+Session ID: ad905294218eeb4d13a9e80fa137d399
+	at org.testng.Assert.fail(Assert.java:111)
+	at productManagementTest.ColorSettingsTest.verifyDeleteColor(ColorSettingsTest.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>productManagementTest.ColorSettingsTest@6f03482</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='productManagementTest.PublisherSettingsTest.verifyDeletePublisherfunctionality()'><b>verifyDeletePublisherfunctionality</b><br>Test class: productManagementTest.PublisherSettingsTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.PublisherSettingsTest@9d5509a</td></tr>
+<tr>
+<td title='productManagementTest.BrandSettingsTest.verifyAddBrandfunctionality()'><b>verifyAddBrandfunctionality</b><br>Test class: productManagementTest.BrandSettingsTest<br>Parameters: Hollis, jake.wiegand@gmail.com, 25255, Colene Hand III, 934143142</td>
+<td></td>
+<td>2</td>
+<td>productManagementTest.BrandSettingsTest@3b0090a4</td></tr>
+<tr>
+<td title='productManagementTest.ProductsTest.verifyDeleteProduct()'><b>verifyDeleteProduct</b><br>Test class: productManagementTest.ProductsTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.ProductsTest@1fa121e2</td></tr>
+<tr>
+<td title='productManagementTest.ProductsTest.verifyEditProduct()'><b>verifyEditProduct</b><br>Test class: productManagementTest.ProductsTest</td>
+<td></td>
+<td>2</td>
+<td>productManagementTest.ProductsTest@1fa121e2</td></tr>
+<tr>
+<td title='productManagementTest.SizeSettingsTest.verifySizeEditFunctionality()'><b>verifySizeEditFunctionality</b><br>Test class: productManagementTest.SizeSettingsTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.SizeSettingsTest@3eb25e1a</td></tr>
+<tr>
+<td title='productManagementTest.StockCategoryTest.verifyAddStockfunctionality()'><b>verifyAddStockfunctionality</b><br>Test class: productManagementTest.StockCategoryTest<br>Parameters: Olive Yew, R. M. Pitt</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.StockCategoryTest@1e800aaa</td></tr>
+<tr>
+<td title='productManagementTest.TypeSettingsTest.verifyAddTypefunctionality()'><b>verifyAddTypefunctionality</b><br>Test class: productManagementTest.TypeSettingsTest<br>Parameters: Home</td>
+<td></td>
+<td>2</td>
+<td>productManagementTest.TypeSettingsTest@185a6e9</td></tr>
+<tr>
+<td title='productManagementTest.AddNewWeightTest.addNewWeightTest()'><b>addNewWeightTest</b><br>Test class: productManagementTest.AddNewWeightTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.AddNewWeightTest@3cd3e762</td></tr>
+<tr>
+<td title='productManagementTest.EditionSettingsTest.verifyDeleteEditionfunctionality()'><b>verifyDeleteEditionfunctionality</b><br>Test class: productManagementTest.EditionSettingsTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.EditionSettingsTest@179ece50</td></tr>
+<tr>
+<td title='productManagementTest.ProductsTest.verifyAddStationaryProduct()'><b>verifyAddStationaryProduct</b><br>Test class: productManagementTest.ProductsTest</td>
+<td></td>
+<td>3</td>
+<td>productManagementTest.ProductsTest@1fa121e2</td></tr>
+<tr>
+<td title='productManagementTest.EditionSettingsTest.verifyAddEditionfunctionality()'><b>verifyAddEditionfunctionality</b><br>Test class: productManagementTest.EditionSettingsTest<br>Parameters: 2013</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.EditionSettingsTest@179ece50</td></tr>
+<tr>
+<td title='productManagementTest.SizeSettingsTest.verifySizeDeleteFunctionality()'><b>verifySizeDeleteFunctionality</b><br>Test class: productManagementTest.SizeSettingsTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.SizeSettingsTest@3eb25e1a</td></tr>
+<tr>
+<td title='productManagementTest.ProductsTest.verifyAddUniformProduct()'><b>verifyAddUniformProduct</b><br>Test class: productManagementTest.ProductsTest</td>
+<td></td>
+<td>8</td>
+<td>productManagementTest.ProductsTest@1fa121e2</td></tr>
+<tr>
+<td title='productManagementTest.EditionSettingsTest.verifyEditEditionfunctionality()'><b>verifyEditEditionfunctionality</b><br>Test class: productManagementTest.EditionSettingsTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.EditionSettingsTest@179ece50</td></tr>
+<tr>
+<td title='productManagementTest.PublisherSettingsTest.verifyEditPublisherfunctionality()'><b>verifyEditPublisherfunctionality</b><br>Test class: productManagementTest.PublisherSettingsTest<br>Parameters: Bode</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.PublisherSettingsTest@9d5509a</td></tr>
+<tr>
+<td title='productManagementTest.ColorSettingsTest.verifyAddColorfunctionality()'><b>verifyAddColorfunctionality</b><br>Test class: productManagementTest.ColorSettingsTest<br>Parameters: #silver, #CCED14</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.ColorSettingsTest@6f03482</td></tr>
+<tr>
+<td title='productManagementTest.TypeSettingsTest.verifyEditTypefunctionality()'><b>verifyEditTypefunctionality</b><br>Test class: productManagementTest.TypeSettingsTest<br>Parameters: Health & Toys</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.TypeSettingsTest@185a6e9</td></tr>
+<tr>
+<td title='productManagementTest.ProductBarcodePrintingTest.productBarcodePrintingTest()'><b>productBarcodePrintingTest</b><br>Test class: productManagementTest.ProductBarcodePrintingTest</td>
+<td></td>
+<td>3</td>
+<td>productManagementTest.ProductBarcodePrintingTest@5bda8e08</td></tr>
+<tr>
+<td title='productManagementTest.TypeSettingsTest.verifyDeleteTypefunctionality()'><b>verifyDeleteTypefunctionality</b><br>Test class: productManagementTest.TypeSettingsTest</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.TypeSettingsTest@185a6e9</td></tr>
+<tr>
+<td title='productManagementTest.SizeSettingsTest.verifyAddSizefunctionality()'><b>verifyAddSizefunctionality</b><br>Test class: productManagementTest.SizeSettingsTest<br>Parameters: 46</td>
+<td></td>
+<td>2</td>
+<td>productManagementTest.SizeSettingsTest@3eb25e1a</td></tr>
+<tr>
+<td title='productManagementTest.PublisherSettingsTest.verifyAddPublisherfunctionality()'><b>verifyAddPublisherfunctionality</b><br>Test class: productManagementTest.PublisherSettingsTest<br>Parameters: Thiel</td>
+<td></td>
+<td>1</td>
+<td>productManagementTest.PublisherSettingsTest@9d5509a</td></tr>
+</table><p>
+</body>
+</html>

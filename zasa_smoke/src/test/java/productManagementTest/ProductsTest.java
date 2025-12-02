@@ -1,8 +1,8 @@
 package productManagementTest;
 
+import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -14,7 +14,7 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class ProductsTest extends BaseTest {
 
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void verifyAddUniformProduct() {
 
 		ExtentTest test = ExtentTestListener.getTest();
@@ -30,12 +30,12 @@ public class ProductsTest extends BaseTest {
 			Assert.assertEquals(actualSuccessMessage, "Product added successfully.");
 			test.pass("Uniform product added successfully");
 		} catch (Exception e) {
-			test.fail("Failed" + e.getMessage());
+			Assert.fail("Failed" + e.getMessage());
 			throw e;
 		}
 	}
 
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void verifyDeleteProduct() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -51,12 +51,12 @@ public class ProductsTest extends BaseTest {
 			Assert.assertEquals(actualDeleteMessage, "Product deleted successfully.");
 			test.pass("Deleted the product successfully");
 		} catch (Exception e) {
-			test.fail("Failed" + e.getMessage());
+			Assert.fail("Failed" + e.getMessage());
 			throw e;
 		}
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void verifyAddStationaryProduct() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -74,13 +74,13 @@ public class ProductsTest extends BaseTest {
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed" + e.getMessage());
+			Assert.fail("Failed" + e.getMessage());
 			throw e;
 		}
 		// verifyDeleteProduct();
 	}
 
-	@Test(priority = 3)
+	//@Test(priority = 3)
 	public void verifyEditProduct() throws InterruptedException {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -98,7 +98,31 @@ public class ProductsTest extends BaseTest {
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed" + e.getMessage());
+			Assert.fail("Failed" + e.getMessage());
+			throw e;
+		}
+	}
+	
+	@Test
+	public void checkThePolicyUpdateFunction()
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		ProductPage p = new ProductPage(driver);
+		try {
+			test.info("Opening the Product module");
+			sp.openProductPage();
+			test.info("Updating the policy of the product");
+			p.policyUpdate();
+			
+			String expectedMessage=p.getPolicyUpdateMessage();
+			Assert.assertEquals(expectedMessage, "Policy updated successfully.");
+			test.pass("Policy updated successfully.");
+			
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
 			throw e;
 		}
 	}

@@ -1,5 +1,8 @@
 package productManagementTest;
 
+import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -29,10 +32,10 @@ public class ProductBarcodePrintingTest extends BaseTest {
 			pbp.clickPrintBarcodes();
 
 			String expectedMessage = pbp.getPdfDownloadedMessage();
-			Assert.assertEquals(expectedMessage, "PDF downloaded successfully.");
+			AssertJUnit.assertEquals(expectedMessage, "PDF downloaded successfully.");
 			test.pass("PDF downloaded successfully.");
 		} catch (Exception e) {
-			test.fail("Failed" + e.getMessage());
+			Assert.fail("Failed" + e.getMessage());
 			throw e;
 		}
 

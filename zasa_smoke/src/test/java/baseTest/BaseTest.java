@@ -33,7 +33,7 @@ public class BaseTest {
 	public void setup() throws IOException {
 		p = new Properties();
 		FileReader file = new FileReader(
-				System.getProperty("user.dir") + "/zasa_smoke/config.properties");
+				System.getProperty("user.dir") + "/config.properties");
 		p.load(file);
 
 		String browser = p.getProperty("browser");

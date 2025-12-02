@@ -1,5 +1,8 @@
 package productManagementTest;
 
+import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -42,13 +45,13 @@ public class PublisherSettingsTest extends BaseTest{
 		ps.createPublisher(name);
 		
 		String expectedMessage=ps.getpublisherAddedMessage();
-		Assert.assertEquals(expectedMessage, "Publisher added successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Publisher added successfully.");
 		
 		test.pass("Publisher added successfully");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 			throw e;
 		}
 	}
@@ -67,12 +70,12 @@ public class PublisherSettingsTest extends BaseTest{
 	    
 		
 		String expectedMessage=ps.getPublisherUpdatedMessage();
-		Assert.assertEquals(expectedMessage, "Publisher updated successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Publisher updated successfully.");
 		test.pass("Publisher updated successfully");
 	    }
 	    catch(Exception e)
 	    {
-	    	test.fail("Failed: " + e.getMessage());
+	    	Assert.fail("Failed: " + e.getMessage());
 	    	throw e;
 	    }
 		
@@ -91,12 +94,12 @@ public class PublisherSettingsTest extends BaseTest{
 		
 		ps.deletePublisher();
 		String expectedMessage=ps.getPublisherDeletedMessage();
-		Assert.assertEquals(expectedMessage, "Publisher deleted successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Publisher deleted successfully.");
 		test.pass("Publisher deleted successfully.");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 	    	throw e;
 		}
 	}

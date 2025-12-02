@@ -1,5 +1,8 @@
 package productManagementTest;
 
+import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
@@ -40,10 +43,10 @@ public class SizeSettingsTest extends BaseTest {
 			test.info("Adding the size");
 			ss.enterSize(size);
 			String expectedMessage = ss.getSizeAddedMessage();
-			Assert.assertEquals(expectedMessage, "Size added successfully.");
+			AssertJUnit.assertEquals(expectedMessage, "Size added successfully.");
 			test.pass("Size added Successfully.");
 		} catch (Exception e) {
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 			throw e;
 		}
 
@@ -64,12 +67,12 @@ public class SizeSettingsTest extends BaseTest {
 		ss.editSize("42");
 
 		String expectedMessage = ss.getSizeUpdatedMessage();
-		Assert.assertEquals(expectedMessage, "Size updated successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Size updated successfully.");
 		test.pass("Size updated successfully");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 			throw e;
 		}
 
@@ -91,12 +94,12 @@ public class SizeSettingsTest extends BaseTest {
 		ss.deleteSize();
 
 		String expectedMessage = ss.getSizeDeletedMessage();
-		Assert.assertEquals(expectedMessage, "Size deleted successfully.");
+		AssertJUnit.assertEquals(expectedMessage, "Size deleted successfully.");
 		test.pass("Size deleted successfully");
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 			throw e;
 		}
 	}

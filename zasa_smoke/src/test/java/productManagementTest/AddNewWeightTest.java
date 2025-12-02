@@ -1,8 +1,9 @@
 package productManagementTest;
 
-import org.testng.Assert;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
+import org.testng.Assert;
+
+import org.testng.annotations.Listeners;
 
 import com.aventstack.extentreports.ExtentTest;
 
@@ -28,7 +29,7 @@ public class AddNewWeightTest extends BaseTest {
 			String expectedMessage = weightPage.getWeightUpdatedMessage();
 			Assert.assertEquals(expectedMessage, "Weights updated successfully!");
 		} catch (Exception e) {
-			test.fail("Failed" + e.getMessage());
+			Assert.fail("Failed" + e.getMessage());
 			throw e;
 		}
 	}

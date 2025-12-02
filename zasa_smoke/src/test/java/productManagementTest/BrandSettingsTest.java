@@ -2,6 +2,7 @@ package productManagementTest;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
@@ -43,7 +44,7 @@ public class BrandSettingsTest extends BaseTest {
 			String expectedmessage = bs.getBrandAddedMessage();
 			Assert.assertEquals(expectedmessage, "Brand added successfully.");
 		} catch (Exception e) {
-			test.fail("Failed" + e.getMessage());
+			Assert.fail("Failed" + e.getMessage());
 			throw e;
 		}
 	}

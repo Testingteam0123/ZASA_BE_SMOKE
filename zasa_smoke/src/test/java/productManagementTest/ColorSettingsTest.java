@@ -2,6 +2,7 @@ package productManagementTest;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
@@ -49,7 +50,7 @@ public class ColorSettingsTest extends BaseTest {
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed: " + e.getMessage());
+			Assert.fail("Failed: " + e.getMessage());
 			throw e;
 		}
 
@@ -76,7 +77,7 @@ public class ColorSettingsTest extends BaseTest {
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed"+e.getMessage());
+			Assert.fail("Failed"+e.getMessage());
 			throw e;
 		}
 
@@ -98,7 +99,7 @@ public class ColorSettingsTest extends BaseTest {
 		}
 		catch(Exception e)
 		{
-			test.fail("Failed"+e.getMessage());
+			Assert.fail("Failed"+e.getMessage());
 			throw e;
 		}
 	}
