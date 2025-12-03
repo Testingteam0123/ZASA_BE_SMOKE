@@ -2,7 +2,7 @@ package utilities;
 
 import java.time.Duration;
 
-
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -44,6 +44,12 @@ public class WaitHelper {
 		} catch (Exception e) {
 			return false;
 		}
+	}
+	
+	public void invisiblilityOfElementLocatedBy(By locator, int time)
+	{
+		WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(time));
+	wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
 	}
 	
 	

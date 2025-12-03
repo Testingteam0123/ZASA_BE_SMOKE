@@ -51,6 +51,25 @@ public class SidePages extends BasePage {
 	@FindBy(xpath="//*[text()='Mark Dead Stock']")
 	WebElement btnMarkDeadStock;
 	
+	@FindBy(xpath="//span[text()='Order Management']")
+	WebElement btnOrderManagement;
+	
+	@FindBy(xpath="//*[text()='Orders']")
+	WebElement btnOrders;
+	
+	@FindBy(xpath="//button[text()='Order Status Scanner']")
+	WebElement btnOrderStatusScanner;
+	
+	@FindBy(xpath="//button[text()='Exchange']")
+	WebElement btnExchange;
+	
+	
+	
+	
+	// ======================
+	// Methods
+	// ======================
+	
 	public void openProductSettingspage() {
 		btnProductManagement.click();
 		brnProductSettings.click();
@@ -96,5 +115,24 @@ public class SidePages extends BasePage {
 		btnStockManagement.click();
 		btnMarkDeadStock.click();
 	}
+	
+	public void openOrdersModule()
+	{
+		btnOrderManagement.click();
+		btnOrders.click();
+	}
+	
+	public void openOrderScannerPage()
+	{
+		btnOrderManagement.click();
+		btnOrderStatusScanner.click();
+	}
+	
+	public void openExchangePage()
+	{
+		btnOrderManagement.click();
+		btnExchange.click();
+	}
+	
 	
 }
