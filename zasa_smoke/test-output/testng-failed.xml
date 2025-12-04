@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="orderManagementTest.OrderStatusScannerTest">
+      <class name="orderManagementTest.CustomerTest">
         <methods>
-          <include name="verifyOrderStatusScannerPage"/>
+          <include name="verifyTheSearchCustomerFunction"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- orderManagementTest.OrderStatusScannerTest -->
+      </class> <!-- orderManagementTest.CustomerTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

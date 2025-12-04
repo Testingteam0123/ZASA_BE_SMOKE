@@ -63,6 +63,12 @@ public class SidePages extends BasePage {
 	@FindBy(xpath="//button[text()='Exchange']")
 	WebElement btnExchange;
 	
+	@FindBy(xpath="//button[text()='Return']")
+	WebElement btnReturn;
+	
+	@FindBy(xpath="//button[text()='Customer']")
+	WebElement btnCustomer;
+	
 	
 	
 	
@@ -134,5 +140,16 @@ public class SidePages extends BasePage {
 		btnExchange.click();
 	}
 	
+	public void openReturnPage()
+	{
+		btnOrderManagement.click();
+		btnReturn.click();
+	}
+	
+	public void openCustomerPage()
+	{
+		btnOrderManagement.click();
+		btnCustomer.click();
+	}
 	
 }
