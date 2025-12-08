@@ -1,0 +1,76 @@
+package settingsObjects;
+
+
+import java.util.List;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+import commonObjects.BasePage;
+import utilities.WaitHelper;
+
+public class RateManagementPage extends BasePage{
+	
+	WaitHelper wait= new WaitHelper(driver);
+
+	public RateManagementPage(WebDriver driver) {
+		super(driver);
+	}
+	
+	@FindBy(xpath = "//li[contains(@class,'group toast')]//div//div[text()='Successfully logged In']")
+	WebElement loginSuccessMessage;
+	
+	@FindBy(xpath="(//input[@placeholder='Enter New Rate'])[1]")
+	WebElement textNewRate;
+	
+	@FindBy(xpath="//button[text()='SAVE']")
+	WebElement btnSave;
+	
+	@FindBy(xpath="//div[text()='Product rates updated successfully.']")
+	WebElement savedSuccessMessage;
+	
+	@FindBy(xpath="//input[contains(@placeholder,'Search')]")
+	WebElement searchBox;
+	
+	@FindBy(xpath = "//table//tbody//tr//td[2]/div/div")
+	List<WebElement> firstRow;
+	
+	public void enterNewRate(String text) 
+	{
+		textNewRate.sendKeys(text);
+		btnSave.click();
+	}
+	
+	
+	public void enterSearch(String product)
+	{
+		searchBox.sendKeys(product);
+	}
+	
+	public String getSavedSuccessMessage()
+	{
+		wait.visibilityOf(savedSuccessMessage, 3);
+		return savedSuccessMessage.getText();
+	}
+	
+	
+	public boolean checkProduct(String productName) throws InterruptedException
+	{
+		wait.visibilityOf(loginSuccessMessage, 3);
+		
+		  Thread.sleep(800);
+		
+		wait.visibilityOfAll(firstRow, 3);
+		for(WebElement product: firstRow)
+		{
+			if(product.getText().equals(productName))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+	
+
+}

@@ -66,8 +66,29 @@ public class SidePages extends BasePage {
 	@FindBy(xpath="//button[text()='Return']")
 	WebElement btnReturn;
 	
+	@FindBy(xpath="//button[text()='Scan to Pack']")
+	WebElement btnScanToPack;
+	
 	@FindBy(xpath="//button[text()='Customer']")
 	WebElement btnCustomer;
+	
+	@FindBy(xpath="//span[text()='Settings']")
+	WebElement btnSettings;
+	
+	@FindBy(xpath="(//button[text()='Rate Management'])[1]")
+	WebElement btnRateManagement;
+	
+	@FindBy(xpath="(//button[text()='Discount Coupon'])[1]")
+	WebElement btnDiscountCoupon;
+	
+	@FindBy(xpath="(//button[text()='Order Settings'])[1]")
+	WebElement btnOrderSettings;
+	
+	@FindBy(xpath="(//button[text()='Email Settings'])[1]")
+	WebElement btnEmailSettings;
+	
+	@FindBy(xpath="(//button[text()='Delivery Partner'])[1]")
+	WebElement btnDeliveryPartner;
 	
 	
 	
@@ -146,10 +167,47 @@ public class SidePages extends BasePage {
 		btnReturn.click();
 	}
 	
+	public void openScanToPack()
+	{
+		btnOrderManagement.click();
+		btnScanToPack.click();
+	}
+	
 	public void openCustomerPage()
 	{
 		btnOrderManagement.click();
 		btnCustomer.click();
 	}
+	
+	public void openRateManagementPage()
+	{
+		btnSettings.click();
+		btnRateManagement.click();
+	}
+	
+	public void openDiscountCouponPage()
+	{
+		btnSettings.click();
+		btnDiscountCoupon.click();
+	}
+	
+	public void openOrderSettingsPage()
+	{
+		btnSettings.click();
+		btnOrderSettings.click();
+	}
+	
+	public void openEmailSettingsPage()
+	{
+		btnSettings.click();
+		btnEmailSettings.click();
+	}
+	
+	public void openDeliveryPartnerPage()
+	{
+		btnSettings.click();
+		btnDeliveryPartner.click();
+	}
+	
 	
 }

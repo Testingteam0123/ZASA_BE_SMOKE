@@ -1,6 +1,7 @@
 package utilities;
 
 import java.time.Duration;
+import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -53,8 +54,22 @@ public class WaitHelper {
 	}
 	
 	
-	
+	public void visibilityOfAll(List<WebElement> elements, int time) {
+	    WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(time));
+	    wait.until(ExpectedConditions.visibilityOfAllElements(elements));
+	}
+
+	public void visibilityOfAllElementsLocatedBy(By locator, int time) {
+		WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(time));
+		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));		
+	}
 	
 		
+	public void visibilityOfElementsLocatedBy(By locator, int time) {
+		WebDriverWait wait =new WebDriverWait(driver, Duration.ofSeconds(time));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(locator));		
+		
+	}
+	
 	
 }
