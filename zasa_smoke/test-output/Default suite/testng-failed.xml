@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="settingsTest.OrderSettingsTest">
+      <class name="userManagementTests.InstitutionTest">
         <methods>
-          <include name="openOrderSettingsPage"/>
+          <include name="verifyInstitutionDeleteFunction"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- settingsTest.OrderSettingsTest -->
+      </class> <!-- userManagementTests.InstitutionTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -90,6 +90,9 @@ public class SidePages extends BasePage {
 	@FindBy(xpath="(//button[text()='Delivery Partner'])[1]")
 	WebElement btnDeliveryPartner;
 	
+	@FindBy(xpath="//span[text()='User Management']")
+	WebElement btnUserManagement;
+	
 	
 	
 	
@@ -209,5 +212,9 @@ public class SidePages extends BasePage {
 		btnDeliveryPartner.click();
 	}
 	
+	public void openUserManagement()
+	{
+		btnUserManagement.click();
+	}
 	
 }
