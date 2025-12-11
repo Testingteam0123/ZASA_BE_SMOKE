@@ -17,43 +17,43 @@ public class TypeSettings extends BasePage {
 	}
 
 	@FindBy(xpath = "//button[text()='TYPE']")
-	WebElement selectType;
+	private WebElement selectType;
 
 	@FindBy(xpath = "//button[text()='Add Type']")
-	WebElement btnAddtype;
+	private WebElement btnAddtype;
 
 	@FindBy(id = "type")
-	WebElement txtEnterType;
+	private WebElement txtEnterType;
 
 	@FindBy(xpath = "//option[text()='Uniform']")
-	WebElement dropdowncategory;
+	private WebElement dropdowncategory;
 
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement saveBtn;
+	private WebElement saveBtn;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[1]")
-	WebElement  editTypeBtn;
+	private WebElement  editTypeBtn;
 	
 	@FindBy(id = "type")
-	WebElement  editTypeField;
+	private WebElement  editTypeField;
 	
 	@FindBy(xpath = "//button[text()='Update']")
-	WebElement  updateBtn;
+	private WebElement  updateBtn;
 	
 	@FindBy(xpath = "//div[text()='Type updated successfully.']")
-	WebElement typeUpdatedMessage;
+	private WebElement typeUpdatedMessage;
 	
 	@FindBy(xpath = "//div[text()='Type added successfully.']")
-	WebElement typeAddedMessage;
+	private WebElement typeAddedMessage;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[2]")
-	WebElement deleteTypeBtn;
+	private WebElement deleteTypeBtn;
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement confirmDelete;
+	private WebElement confirmDelete;
 	
 	@FindBy(xpath="//div[text()='Type deleted successfully.']")
-	WebElement typeDeletedMessage;
+	private WebElement typeDeletedMessage;
 
 	public void verifyAddNewType(String typeName) {
 		selectType.click();

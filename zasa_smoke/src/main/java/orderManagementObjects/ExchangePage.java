@@ -19,19 +19,19 @@ public class ExchangePage extends BasePage{
 	By loader=By.xpath("(//section[@aria-label='Notifications alt+T'])[1]");
 	
 	@FindBy(xpath="//button[text()='Bulk Search']")
-	WebElement btnBulkSearch;
+	private WebElement btnBulkSearch;
 	
 	@FindBy(xpath="//textarea")
-	WebElement textarea;
+	private WebElement textarea;
 	
 	@FindBy(xpath="//button[text()='Search']")
-	WebElement btnSearch;
+	private WebElement btnSearch;
 	
     @FindBy(xpath="//div[text()='Search completed for 1 item(s)']")	  
-    WebElement bulkSearchMessage;
+    private WebElement bulkSearchMessage;
    
     @FindBy(xpath="(//button[contains(@aria-label,'View')])[1]")
-    WebElement exchangeDetailView;
+    private WebElement exchangeDetailView;
 	
 	public void clickBulkSearch()
 	{

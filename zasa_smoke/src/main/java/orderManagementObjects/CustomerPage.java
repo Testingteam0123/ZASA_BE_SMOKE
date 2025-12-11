@@ -17,22 +17,22 @@ public class CustomerPage extends BasePage{
 	}
 	
 	@FindBy(xpath="//input[@placeholder='Search customers...']")
-	WebElement searchField;
+	private WebElement searchField;
 	
 	@FindBy(xpath="//*[text()='Search Customer / Student']")
-	WebElement searchCustomer;
+	private WebElement searchCustomer;
 	
 	@FindBy(xpath = "//option[@value=4]")
-	WebElement selectSchool;
+	private WebElement selectSchool;
 	
 	@FindBy(xpath="//input[@placeholder='Enter admission number']")
-	WebElement enterAdmissionNo;
+	private WebElement enterAdmissionNo;
 	
 	@FindBy(xpath="//button[text()='Search Customer']")
-	WebElement clickSearchButton;
+	private WebElement clickSearchButton;
 	
 	@FindBy(xpath="//div[text()='Found 1 student(s)']")
-	WebElement searchMessage;
+	private WebElement searchMessage;
 	
 	public void enterName(String name)
 	{

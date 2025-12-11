@@ -16,25 +16,25 @@ public class StockCategory extends BasePage{
 	}
 	
 	@FindBy(xpath="//button[text()='STOCK CATEGORY']")
-	WebElement selectStock;
+	private WebElement selectStock;
 	
 	@FindBy(xpath="//button[text()='Add Stock Category']")
-	WebElement btnAddStock;
+	private WebElement btnAddStock;
 	
 	@FindBy(id="categoryname")
-	WebElement txtCategoryName;
+	private WebElement txtCategoryName;
 	
 	@FindBy(xpath="//option[text()='Stationery']")
-	WebElement selectcategory;
+	private WebElement selectcategory;
 	
 	@FindBy(css="#description")
-	WebElement txtdescription;
+	private WebElement txtdescription;
 	
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement saveBtn;
+	private WebElement saveBtn;
 	
 	@FindBy(xpath="//div[text()='Stock Category added successfully.']")
-	WebElement stockCategoryAddedMessage;
+	private WebElement stockCategoryAddedMessage;
 	
 	
 	public void addStockCategory(String name,String txt)

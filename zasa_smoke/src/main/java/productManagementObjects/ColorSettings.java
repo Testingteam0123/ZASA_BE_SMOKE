@@ -19,53 +19,53 @@ public class ColorSettings extends BasePage {
 	
 	//Add color
 	@FindBy(xpath = "//button[text()='Add Color']")
-	WebElement btnAddColor;
+	private WebElement btnAddColor;
 
 	@FindBy(id = "colorname")
-	WebElement txtColorName;
+	private WebElement txtColorName;
 
 	@FindBy(id = "colorcode")
-	WebElement txtColorCode;
+	private WebElement txtColorCode;
 
 	@FindBy(xpath = "//option[text()='Uniform']")
-	WebElement dropdownCategory;
+	private WebElement dropdownCategory;
 
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Color added successfully.']")
-	WebElement colorAddedMessage;
+	private WebElement colorAddedMessage;
 	
 	
 	//Edit
 	@FindBy(xpath="(//button[@aria-label='Edit'])[1]")
-	WebElement btnEdit;
+	private WebElement btnEdit;
 	
 	@FindBy(id = "colorname")
-	WebElement txtColorRename;
+	private WebElement txtColorRename;
 	
 	@FindBy(id = "colorcode")
-	WebElement txtColorRecode;
+	private WebElement txtColorRecode;
 	
 	@FindBy(xpath="//button[text()='Update']")
-	WebElement btnUpdate;
+	private WebElement btnUpdate;
 	
 	@FindBy(xpath="//div[text()='Color updated successfully.']")
-	WebElement colorUpdatedMessage;
+	private WebElement colorUpdatedMessage;
 	
 	//Delete
 	@FindBy(xpath="(//button[@aria-label='Delete'])[1]")
-	WebElement btnDelete;
+	private WebElement btnDelete;
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement okBtn;
+	private WebElement okBtn;
 	
 	//status
 	@FindBy(xpath="(//button[@role='switch'])[1]")
-	WebElement btnStatus;
+	private WebElement btnStatus;
 	
 	@FindBy(xpath="//div[text()='Colour deleted successfully.']")
-	WebElement colorDeletedMessage;
+	private WebElement colorDeletedMessage;
 	
 	
 

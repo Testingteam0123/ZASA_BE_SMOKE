@@ -16,43 +16,43 @@ public class PublisherSettings extends BasePage{
 	}
 	
 	@FindBy(xpath="//button[text()='PUBLISHER']")
-	WebElement selectpublisher;
+	private WebElement selectpublisher;
 	
 	@FindBy(xpath="//button[text()='Add Publisher']")
-	WebElement btnAddPublisher;
+	private WebElement btnAddPublisher;
 	
 	@FindBy(id="publishername")
-	WebElement publishName;
+	private WebElement publishName;
 	
 	@FindBy(xpath="//option[text()='Stationery']")
-	WebElement selectcategory;
+	private WebElement selectcategory;
 	
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement saveBtn;
+	private WebElement saveBtn;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[1]")
-	WebElement  editPublisherBtn;
+	private WebElement  editPublisherBtn;
 	
 	@FindBy(id = "publishername")
-	WebElement  editPublisherField;
+	private WebElement  editPublisherField;
 	
 	@FindBy(xpath = "//button[text()='Update']")
-	WebElement  updateBtn;
+	private WebElement  updateBtn;
 	
 	@FindBy(xpath = "//div[text()='Publisher updated successfully.']")
-	WebElement publisherUpdatedMessage;
+	private WebElement publisherUpdatedMessage;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[2]")
-	WebElement deletePublisherBtn;
+	private WebElement deletePublisherBtn;
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement confirmDelete;
+	private WebElement confirmDelete;
 	
 	@FindBy(xpath="//div[text()='Publisher deleted successfully.']")
-	WebElement publisherDeletedMessage;
+	private WebElement publisherDeletedMessage;
 	
 	@FindBy(xpath="//div[text()='Publisher added successfully.']")
-	WebElement publisherAddedMessage;
+	private WebElement publisherAddedMessage;
 	
 	
 	public void createPublisher(String name)

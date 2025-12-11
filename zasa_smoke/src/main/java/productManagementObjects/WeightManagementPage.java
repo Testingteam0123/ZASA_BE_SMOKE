@@ -18,13 +18,13 @@ public class WeightManagementPage extends BasePage {
 	
 	
 	@FindBy(xpath="(//input[@placeholder='Enter New Weight'])[1]")
-	WebElement txtNewWeight;
+	private WebElement txtNewWeight;
 	
 	@FindBy(xpath="//button[text()='SAVE']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Weights updated successfully!']")
-	WebElement weightUpdatedMessage;
+	private WebElement weightUpdatedMessage;
 	
 	
 	

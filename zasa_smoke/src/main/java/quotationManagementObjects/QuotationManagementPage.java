@@ -24,49 +24,49 @@ public class QuotationManagementPage extends BasePage {
 	// ======================
 	
 	@FindBy(xpath="//button[text()='Add Quotation']")
-	WebElement btnAddQuotation;
+	private WebElement btnAddQuotation;
 	
 	@FindBy(xpath="//option[text()='Cordova']")
-	WebElement selectSupplier;
+	private WebElement selectSupplier;
 	
 	@FindBy(xpath="//option[text()='Uniform']")
-	WebElement selectCategory;
+	private WebElement selectCategory;
 	
 	@FindBy(xpath="//input[@placeholder='Search with Product Name or Barcode']")
-	WebElement clickProduct;
+	private WebElement clickProduct;
 	
 	@FindBy(xpath="//button[@title='Add']")
-	List<WebElement> selectProductAddBtn;
+	private List<WebElement> selectProductAddBtn;
 	
 	@FindBy(xpath="//button[text()='SAVE']")
-	WebElement clickSave;
+	private WebElement clickSave;
 	
 	@FindBy(xpath="//div[text()='Quotation added successfully.']")
-	WebElement QuotationAddedMessage;
+	private WebElement QuotationAddedMessage;
 	
 	@FindBy(xpath="(//button[@aria-haspopup='menu'])[2]")
-	WebElement changeStatus;
+	private WebElement changeStatus;
 	
 	@FindBy(xpath="//div[text()='Approve']")
-	WebElement selectApproved;
+	private WebElement selectApproved;
 	
 	@FindBy(xpath="//textarea[@placeholder='Enter reason here...']")
-	WebElement enterReason;
+	private WebElement enterReason;
 	
 	@FindBy(xpath="//button[text()='Save']")
-	WebElement clickSaveReason;
+	private WebElement clickSaveReason;
 	
 	@FindBy(xpath="(//button[contains(@class,'p-1 hover')])[1]")
-	WebElement deleteQuotation;
+	private WebElement deleteQuotation;
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement confirmDelete;
+	private WebElement confirmDelete;
 	
 	@FindBy(xpath="//div[text()='Quotation deleted successfully.']")
-	WebElement QuotationDeletedMessage;
+	private WebElement QuotationDeletedMessage;
 	
 	@FindBy(xpath="//div[text()='Quotation status updated successfully.']")
-	WebElement QuotationStatusUpdatedMessage;
+	private WebElement QuotationStatusUpdatedMessage;
 	
 	
 	// ======================

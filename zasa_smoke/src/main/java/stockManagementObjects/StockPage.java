@@ -16,14 +16,14 @@ public class StockPage extends BasePage {
 	}
 	
 	@FindBy(xpath = "//table[contains(@class,'min-w-full')]")
-	WebElement stockTable;
+	private WebElement stockTable;
 	
 	
 	@FindBy(xpath = "//table//tbody//tr")
-	List<WebElement> stockTableRows;
+	private List<WebElement> stockTableRows;
 	
 	@FindBy(xpath = "//span[text()='Next']")
-	WebElement nextButton;
+	private WebElement nextButton;
 	
 	
 	public boolean isStockTableDisplayed() {

@@ -16,43 +16,43 @@ public class EditionSettings extends BasePage{
 	}
 	
 	@FindBy(xpath="//button[text()='EDITION']")
-    WebElement selectEdition;
+	private WebElement selectEdition;
 	
 	@FindBy(xpath="//button[text()='Add Edition']")
-	WebElement btnAddEdition;
+	private WebElement btnAddEdition;
 	
 	@FindBy(css="#editionname")
-	WebElement txteditionName;
+	private WebElement txteditionName;
 	
 	@FindBy(xpath="//option[text()='Stationery']")
-	WebElement selectcategory;
+	private WebElement selectcategory;
 	
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement saveBtn;
+	private WebElement saveBtn;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[1]")
-	WebElement  editEditionBtn;
+	private WebElement  editEditionBtn;
 	
 	@FindBy(id = "editionname")
-	WebElement  editEditionField;
+	private WebElement  editEditionField;
 	
 	@FindBy(xpath = "//button[text()='Update']")
-	WebElement  updateBtn;
+	private WebElement  updateBtn;
 	
 	@FindBy(xpath = "//div[text()='Edition updated successfully.']")
-	WebElement editionUpdatedMessage;
+	private WebElement editionUpdatedMessage;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[2]")
-	WebElement deleteEditionBtn;
+	private WebElement deleteEditionBtn;
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement confirmDelete;
+	private WebElement confirmDelete;
 	
 	@FindBy(xpath="//div[text()='Edition deleted successfully.']")
-	WebElement editionDeletedMessage;
+	private WebElement editionDeletedMessage;
 	
 	@FindBy(xpath="//div[text()='Edition added successfully.']")
-	WebElement editionAddedMessage;
+	private WebElement editionAddedMessage;
 	
 	
 

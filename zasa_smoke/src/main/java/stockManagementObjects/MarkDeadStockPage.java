@@ -19,22 +19,22 @@ public class MarkDeadStockPage extends BasePage{
 	
 	
 	@FindBy(xpath="//table")
-	WebElement markDeadTable;
+	private WebElement markDeadTable;
 	
 	@FindBy(xpath="(//input[@inputmode='numeric'])[1]")
-	WebElement markDeadCount;
+	private WebElement markDeadCount;
 	
 	@FindBy(xpath="//button[text()='Mark Dead']")
-	WebElement btnMarkDead;
+	private WebElement btnMarkDead;
 	
 	@FindBy(xpath="(//button[@title='View History'])[1]")
-	WebElement stockHistory;
+	private WebElement stockHistory;
 	
 	@FindBy(xpath="//div[text()='Dead stock marked successfully!']")
-	WebElement stockMarkedMessage;
+	private WebElement stockMarkedMessage;
 	
 	@FindBy(xpath="//button[text()='Close']")
-	WebElement btnClose;
+	private WebElement btnClose;
 
 	
 	public boolean isMarkDeadTableDisplayed() {

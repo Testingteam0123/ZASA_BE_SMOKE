@@ -19,29 +19,29 @@ public class PurchaseReturnPage extends BasePage {
 	}
 	
 	@FindBy(xpath="//*[text()='Add Purchase Return']")
-	WebElement btnAddPurchaseReturn;
+	private WebElement btnAddPurchaseReturn;
 	
 	
 	@FindBy(xpath="//option[text()='CORDOVA']")
-	WebElement selectSupplier;
+	private WebElement selectSupplier;
 	
 	@FindBy(xpath="//input[@type='date']")
-	WebElement datePicker;
+	private WebElement datePicker;
 	
 	@FindBy(xpath="//option[text()='PO0000011']")
-	WebElement selectPurchase;
+	private WebElement selectPurchase;
 	
 	@FindBy(css="[placeholder='Search with Product Name or Barcode']")
-	WebElement searchProduct;
+	private WebElement searchProduct;
 	
 	@FindBy(xpath="//button[contains(@title,'Add')]//*[name()='svg']")
-	WebElement productSelectedIcon;
+	private WebElement productSelectedIcon;
 	
 	@FindBy(xpath="//button[text()='SAVE']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Purchase Return added Successfully.']")
-	WebElement purchaseReturnAddedMessage;
+	private WebElement purchaseReturnAddedMessage;
 	
 	
 	

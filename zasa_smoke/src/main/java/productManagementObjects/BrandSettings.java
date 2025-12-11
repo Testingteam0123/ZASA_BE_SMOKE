@@ -17,34 +17,34 @@ public class BrandSettings extends BasePage{
 	}
 	
 	@FindBy(xpath="//button[text()='BRAND']")
-	WebElement selectBrand;
+	private WebElement selectBrand;
 	
 	@FindBy(xpath="//button[text()='Add Brand']")
-	WebElement btnAddBrand;
+	private WebElement btnAddBrand;
 	
 	@FindBy(css ="#name")
-	WebElement txtBrandName;
+	private WebElement txtBrandName;
 	
 	@FindBy(css="#email")
-	WebElement txtEmailAdd;
+	private WebElement txtEmailAdd;
 	
 	@FindBy(css="#code")
-	WebElement txtCode;
+	private WebElement txtCode;
 	
 	@FindBy(css="#contactinfo")
-	WebElement txtContInfo;
+	private WebElement txtContInfo;
 	
 	@FindBy(css="[type='number']")
-	WebElement txtNumber;
+	private WebElement txtNumber;
 	
 	@FindBy(xpath = "//option[text()='Uniform']")
-	WebElement dropdownCategory;
+	private WebElement dropdownCategory;
 	
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Brand added successfully.']")
-	WebElement brandAddedMessage;
+	private WebElement brandAddedMessage;
 	
 	public void enterBrand(String name,String email,String code,String contInfo, String contno)
 	{

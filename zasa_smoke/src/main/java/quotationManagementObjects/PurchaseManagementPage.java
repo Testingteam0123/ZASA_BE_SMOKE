@@ -17,49 +17,49 @@ public class PurchaseManagementPage extends BasePage {
 	}
 	
 	@FindBy(xpath="//button[text()='Add Purchase Order']")
-	WebElement btnAddPurchaseOrder;
+	private WebElement btnAddPurchaseOrder;
 	
 	@FindBy(xpath="//option[text()='Direct Purchase']")
-	WebElement selectDirectPurchase;
+	private WebElement selectDirectPurchase;
 	
 	@FindBy(xpath="//option[text()='Purchase Order']")
-	WebElement selectPurchaseOrder;
+	private WebElement selectPurchaseOrder;
 	
 	@FindBy(xpath="//option[text()='CORDOVA']")
-	WebElement selectCordova;
+	private WebElement selectCordova;
 	
 	@FindBy(xpath="//option[text()='QO0000019']")
-	WebElement selectQuotation;
+	private WebElement selectQuotation;
 	
 	@FindBy(xpath="//button[text()='SAVE']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Purchase Order added successfully.']")
-	WebElement purchaseOrderAddedMessage;
+	private WebElement purchaseOrderAddedMessage;
 	
 	@FindBy(xpath="(//button[contains(@class,'p-1 hover')])[1]")
-	WebElement deletePurchaseOrder;
+	private WebElement deletePurchaseOrder;
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement confirmDelete;
+	private WebElement confirmDelete;
 	
 	@FindBy(xpath="//div[text()='Purchase Order deleted successfully.']")
-	WebElement PurchaseDeletedMessage;
+	private WebElement PurchaseDeletedMessage;
 	
 	@FindBy(xpath="(//button[@aria-haspopup='menu'])[2]")
-	WebElement changeStatus;
+	private WebElement changeStatus;
 	
 	@FindBy(xpath="//div[text()='Approve']")
-	WebElement selectApproved;
+	private WebElement selectApproved;
 	
 	@FindBy(xpath="//textarea[@placeholder='Enter reason here...']")
-	WebElement enterReason;
+	private WebElement enterReason;
 	
 	@FindBy(xpath="//button[text()='Approve']")
-	WebElement clickSaveReason;
+	private WebElement clickSaveReason;
 	
 	@FindBy(xpath="//div[text()='Purchase status updated successfully.']")
-	WebElement PurchaseStatusUpdatedMessage;
+	private WebElement PurchaseStatusUpdatedMessage;
 	
 	
 	public void clickAddPurchaseOrder() 

@@ -16,16 +16,16 @@ public class ProductBarcodePrintingPage extends BasePage{
 	}
 
 	@FindBy(xpath="(//input[@inputmode='numeric'])[1]")
-	WebElement txtNoOfPrints;
+	private WebElement txtNoOfPrints;
 	
 	@FindBy(xpath="(//button[@role='checkbox'])[2]")
-	WebElement chkBox;
+	private WebElement chkBox;
 	
 	@FindBy(xpath="//button[text()='Print Barcodes']")
-	WebElement btnPrintBarcodes;
+	private WebElement btnPrintBarcodes;
 	
 	@FindBy(xpath="//div[text()='PDF downloaded successfully.']")
-	WebElement pdfDownloadedMessage;
+	private WebElement pdfDownloadedMessage;
 	
 	
 	

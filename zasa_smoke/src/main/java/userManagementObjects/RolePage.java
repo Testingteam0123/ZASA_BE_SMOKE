@@ -17,43 +17,43 @@ public class RolePage extends BasePage{
 	
 	
 	@FindBy(xpath = "//button[text()='ROLE']")
-	WebElement btnRole;
+	private WebElement btnRole;
 	
 	@FindBy(xpath="//button[text()='Add Role']")
-	WebElement btnAddRole;
+	private WebElement btnAddRole;
 	
 	@FindBy(id="name")
-	WebElement textRoleName;
+	private WebElement textRoleName;
 	
 	@FindBy(css="[id=select-all-permissions]")
-	WebElement selectAllBox;
+	private WebElement selectAllBox;
 	
 	@FindBy(xpath="//input[@placeholder='Search by User Role']")
-	WebElement searchRoleBox;
+	private WebElement searchRoleBox;
 	
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Role added successfully.']")
-	WebElement roleCreatedMessage;
+	private WebElement roleCreatedMessage;
 	
 	@FindBy(xpath="//div[text()='Role updated successfully.']")
-	WebElement roleUpdateddMessage;
+	private WebElement roleUpdateddMessage;
 	
 	@FindBy(xpath="//div[text()='Role deleted successfully.']")
-	WebElement roleDeletedMessage;
+	private WebElement roleDeletedMessage;
 	
 	@FindBy(xpath="(//button[@aria-label='Edit'])[1]")
-	WebElement btnEdit;
+	private WebElement btnEdit;
 	
 	@FindBy(xpath = "//button[text()='Update']")
-	WebElement btnUpdate;
+	private WebElement btnUpdate;
 	
 	@FindBy(xpath="(//button[@aria-label='Delete'])[1]")
-	WebElement btnDelete;	
+	private WebElement btnDelete;	
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement btnOk;
+	private WebElement btnOk;
 
 	
 	

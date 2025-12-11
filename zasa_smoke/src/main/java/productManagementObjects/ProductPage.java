@@ -27,140 +27,140 @@ public class ProductPage extends BasePage {
 
 
 	@FindBy(xpath = "//button[text()='Add Product']")
-	WebElement btnAddProduct;
+	private WebElement btnAddProduct;
 
 	@FindBy(css = "#productname")
-	WebElement txtProductname;
+	private WebElement txtProductname;
 
 	@FindBy(xpath = "(//select[@aria-hidden='true'])[1]")
-	WebElement selectStationery;
+	private WebElement selectStationery;
 
 	@FindBy(css = ".ql-editor")
-	WebElement txtDescription;
+	private WebElement txtDescription;
 
 	@FindBy(xpath = "//input[@id='product-images']")
-	WebElement addProductImage;
+	private WebElement addProductImage;
 
 	@FindBy(xpath = "(//button[@role='combobox' and @data-slot='select-trigger'])[2]")
-	WebElement clickItemCategory;
+	private WebElement clickItemCategory;
 
 	@FindBy(xpath = "//div[@data-state='open']//span[text()='stationery']")
-	WebElement selectStationaryType;
+	private WebElement selectStationaryType;
 
 	@FindBy(id = "price")
-	WebElement txtPurchaseprice;
+	private WebElement txtPurchaseprice;
 
 	@FindBy(id = "sellingprice")
-	WebElement txtSellingPrice;
+	private WebElement txtSellingPrice;
 
 	@FindBy(css = "[aria-haspopup='dialog']")
-	WebElement clickStationaryInstitution;
+	private WebElement clickStationaryInstitution;
 
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement btnSave;
+	private WebElement btnSave;
 
 	@FindBy(xpath = "(//button[contains(@class,'focus:outline-none')])[2]")
-	WebElement actionButton;
+	private WebElement actionButton;
 
 	@FindBy(xpath = "(//div[contains(@role,'menuitem')])[3]")
-	WebElement deleteButton;
+	private WebElement deleteButton;
 
 	@FindBy(xpath = "//button[text()='OK']")
-	WebElement confirmDeleteButton;
+	private WebElement confirmDeleteButton;
 
 	@FindBy(xpath = "//div[normalize-space()='Edit']")
-	WebElement editButton;
+	private WebElement editButton;
 
 	@FindBy(id = "productname")
-	WebElement editProductName;
+	private WebElement editProductName;
 
 	@FindBy(id = "sellingprice")
-	WebElement editSellingPrice;
+	private WebElement editSellingPrice;
 
 	@FindBy(id = "price")
-	WebElement editPurchasePrice;
+	private WebElement editPurchasePrice;
 
 	@FindBy(xpath = "//li[contains(@class,'group toast')]//div//div[text()='Product added successfully.']")
-	WebElement productAddedSuccessMessage;
+	private WebElement productAddedSuccessMessage;
 
 	@FindBy(xpath = "//li[contains(@class,'group toast')]//div//div[text()='Product deleted successfully.']")
-	WebElement deleteMessage;
+	private WebElement deleteMessage;
 
 	@FindBy(xpath = "//li[contains(@class,'group toast')]//div//div[text()='Successfully logged In']")
-	WebElement loginSuccessMessage;
+	private WebElement loginSuccessMessage;
 
 	@FindBy(xpath = "//li[contains(@class,'group toast')]//div//div[text()='Product updated successfully.']")
-	WebElement productUpdatedSuccessMessage;
+	private WebElement productUpdatedSuccessMessage;
 
 //add uniform
 
 	@FindBy(xpath = "//option[text()='Uniform']")
-	WebElement selectUniform;
+	private WebElement selectUniform;
 
 	@FindBy(xpath = "//input[@id='size-chart-images']")
-	WebElement addSizeChart;
+	private WebElement addSizeChart;
 
 	@FindBy(id = "product_video_url")
-	WebElement addVideoUrl;
+	private WebElement addVideoUrl;
 
 	@FindBy(xpath = "//option[text()='Bombay Dyeing']")
-	WebElement selectBrand;
+	private WebElement selectBrand;
 
 	@FindBy(xpath = "//option[text()='Boys Uniform']")
-	WebElement selectItemType;
+	private WebElement selectItemType;
 
 	@FindBy(css = "[aria-haspopup='dialog']:nth-of-type(1)")
-	WebElement clickSizeDropdown;
+	private WebElement clickSizeDropdown;
 
 	@FindBy(xpath = "//div[contains(@class,'cursor-pointer')]//span[text()='28']")
-	WebElement selectSize;
+	private WebElement selectSize;
 
 	@FindBy(xpath = "//option[text()='Male']")
-	WebElement selectGender;
+	private WebElement selectGender;
 
 	@FindBy(xpath = "//option[text()='Core Uniform']")
-	WebElement selectStockCategory;
+	private WebElement selectStockCategory;
 
 	@FindBy(xpath = "//option[text()='Middle']")
-	WebElement selectGrade;;
+	private WebElement selectGrade;;
 
 	@FindBy(xpath = "(//button[@aria-haspopup='dialog'])[2]")
-	WebElement clickInstitutionDropdown;
+	private WebElement clickInstitutionDropdown;
 
 	@FindBy(xpath = "//div[contains(@class,'cursor-pointer')]//span[text()='New Indian Model School, Dubai']")
-	WebElement selectInstitution;
+	private WebElement selectInstitution;
 
 // add book
 
 	@FindBy(xpath = "(//button[@role='combobox'])[1]")
-	WebElement clickCategoryDropdown;
+	private WebElement clickCategoryDropdown;
 
 	@FindBy(xpath = "(//select[@aria-hidden='true'])[1]//option[text()='Book']")
-	WebElement selectBook;
+	private WebElement selectBook;
 
 	@FindBy(xpath = "//option[text()='Text Book']")
-	WebElement selectBookType;
+	private WebElement selectBookType;
 
 	@FindBy(xpath = "//option[text()='AL MASAR']")
-	WebElement selectPublisher;
+	private WebElement selectPublisher;
 
 	@FindBy(xpath = "//option[text()='2025']")
-	WebElement editionYear;
+	private WebElement editionYear;
 
 	@FindBy(xpath = "//option[text()='Note Book']")
-	WebElement selectBookCategory;
+	private WebElement selectBookCategory;
 	
 	@FindBy(xpath="(//button[contains(@class,'peer')])[2]")
-	WebElement selectCheckBox;
+	private WebElement selectCheckBox;
 	
 	@FindBy(xpath="//button/span[text()='Bulk Action']")
-	WebElement btnBulkAction;
+	private WebElement btnBulkAction;
 	
 	@FindBy(xpath="//button[text()='Exchange/Return']")
-	WebElement selectOption;
+	private WebElement selectOption;
 	
 	@FindBy(xpath="//li[contains(@class,'group toast')]//div//div[text()='Policy updated successfully.']")
-	WebElement policyUpdateMessage;
+	private WebElement policyUpdateMessage;
 
 	// add stationary
 	public void addStationaryProduct(String name, String price, String imagePath) {

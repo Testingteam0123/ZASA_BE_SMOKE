@@ -17,43 +17,43 @@ public class SizeSettings extends BasePage {
 	}
 
 	@FindBy(xpath = "//button[text()='SIZE']")
-	WebElement sizeField;
+	private WebElement sizeField;
 
 	@FindBy(xpath = "//button[text()='Add Size']")
-	WebElement btnAddSize;
+	private WebElement btnAddSize;
 
 	@FindBy(id = "size")
-	WebElement txtEnterSize;
+	private WebElement txtEnterSize;
 
 	@FindBy(xpath = "//option[text()='Uniform']")
-	WebElement dropdowncategory;
+	private WebElement dropdowncategory;
 
 	@FindBy(xpath = "//button[text()='Save']")
-	WebElement saveBtn;
+	private WebElement saveBtn;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[1]")
-	WebElement  editSizeBtn;
+	private WebElement  editSizeBtn;
 	
 	@FindBy(id = "size")
-	WebElement  editSizeField;
+	private WebElement  editSizeField;
 	
 	@FindBy(xpath = "//button[text()='Update']")
-	WebElement  updateBtn;
+	private WebElement  updateBtn;
 	
 	@FindBy(xpath = "//div[text()='Size updated successfully.']")
-	WebElement sizeUpdatedMessage;
+	private WebElement sizeUpdatedMessage;
 	
 	@FindBy(xpath = "(//button[contains(@class,'text-[#454661]')])[2]")
-	WebElement deleteSizeBtn;
+	private WebElement deleteSizeBtn;
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement confirmDelete;
+	private WebElement confirmDelete;
 	
 	@FindBy(xpath="//div[text()='Size deleted successfully.']")
-	WebElement sizeDeletedMessage;
+	private WebElement sizeDeletedMessage;
 	
 	@FindBy(xpath="//div[text()='Size added successfully.']")
-	WebElement sizeAddedMessage;
+	private WebElement sizeAddedMessage;
 	
 	
 

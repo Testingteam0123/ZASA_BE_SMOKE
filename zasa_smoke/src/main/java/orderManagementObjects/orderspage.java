@@ -20,28 +20,28 @@ public class orderspage extends BasePage{
     By loader=By.xpath("(//section[@aria-label='Notifications alt+T'])[1]");
     
 	@FindBy(xpath="(//input[@type='text'])[1]")
-	WebElement searchFunction;
+	private WebElement searchFunction;
 	
 	@FindBy(xpath="(//button[@aria-label='View Order'])[1]")
-	WebElement orderView;
+	private WebElement orderView;
 	
 	@FindBy(xpath="//button[text()='Await for Payment (']")
-	WebElement btnAwaitpayement;
+	private WebElement btnAwaitpayement;
 	
 	@FindBy(xpath="//button[text()='Cancelled (']")
-	WebElement btnCancelled;
+	private WebElement btnCancelled;
 	
 	@FindBy(xpath = "//button[text()='Bulk Search']")
-	WebElement btnBulkSearch;
+	private WebElement btnBulkSearch;
 	
 	@FindBy(xpath="//textarea")
-	WebElement enterData;
+	private WebElement enterData;
 	
 	@FindBy(xpath="//button[text()='Search']")
-	WebElement btnSearch;
+	private WebElement btnSearch;
 	
     @FindBy(xpath="//div[text()='Search completed for 2 item(s)']")	
-    WebElement bulkSearchMessage;
+    private WebElement bulkSearchMessage;
 	
 	public void checkSearch(String orderID)
 	{

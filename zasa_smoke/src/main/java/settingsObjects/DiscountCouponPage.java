@@ -17,29 +17,29 @@ public class DiscountCouponPage extends BasePage{
 	}
 	
 	@FindBy(xpath="//button[text()='Add Discount Coupon']")
-	WebElement btnAddDiscountCoupon;
+	private WebElement btnAddDiscountCoupon;
 	
 	@FindBy(xpath="//option[text()='New Indian Model School, Dubai']")
-	WebElement InstitutionOption;
+	private WebElement InstitutionOption;
 	
 	@FindBy(xpath="//input[@name='email']")
-	WebElement emailField;
+	private WebElement emailField;
 	
 	@FindBy(xpath="//button[text()='Auto Generate']")
-	WebElement couponCode;
+	private WebElement couponCode;
 	
 	@FindBy(xpath="//div[text()='Coupon code generated!']")
-	WebElement couponGeneratedMessage;
+	private WebElement couponGeneratedMessage;
 	
 	@FindBy(id="discount_amount")
-	WebElement fieldCouponAmount;
+	private WebElement fieldCouponAmount;
 	
 	
 	@FindBy(xpath="//button[text()='Save']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Discount coupon added successfully.']")
-	WebElement couopnCreatedMessage;
+	private WebElement couopnCreatedMessage;
 	
 	
 	

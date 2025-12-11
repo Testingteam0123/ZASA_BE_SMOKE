@@ -15,16 +15,16 @@ public class AdminLoginPage extends BasePage {
 	}
 
 	@FindBy(id = "email")
-	WebElement emailField;
+	private WebElement emailField;
 
 	@FindBy(id = "password")
-	WebElement passField;
+	private WebElement passField;
 
 	@FindBy(id = "remember")
-	WebElement rememberBox;
+	private WebElement rememberBox;
 
 	@FindBy(xpath = "//button[text()='Login']")
-	WebElement loginbutton;
+	private WebElement loginbutton;
 
 	public void loginAdmin(String email,String pass)
 	{

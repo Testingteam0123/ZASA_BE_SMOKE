@@ -19,22 +19,22 @@ public class RateManagementPage extends BasePage{
 	}
 	
 	@FindBy(xpath = "//li[contains(@class,'group toast')]//div//div[text()='Successfully logged In']")
-	WebElement loginSuccessMessage;
+	private WebElement loginSuccessMessage;
 	
 	@FindBy(xpath="(//input[@placeholder='Enter New Rate'])[1]")
-	WebElement textNewRate;
+	private WebElement textNewRate;
 	
 	@FindBy(xpath="//button[text()='SAVE']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Product rates updated successfully.']")
-	WebElement savedSuccessMessage;
+	private WebElement savedSuccessMessage;
 	
 	@FindBy(xpath="//input[contains(@placeholder,'Search')]")
-	WebElement searchBox;
+	private WebElement searchBox;
 	
 	@FindBy(xpath = "//table//tbody//tr//td[2]/div/div")
-	List<WebElement> firstRow;
+	private List<WebElement> firstRow;
 	
 	public void enterNewRate(String text) 
 	{

@@ -17,55 +17,55 @@ public class InstitutionPage extends BasePage{
 	}
 	
 	@FindBy(xpath="//button[text()='INSTITUTION']")
-	WebElement btnInstitution;
+	private WebElement btnInstitution;
 	
 	@FindBy(xpath="//button[text()='Add Institution']")
-	WebElement btnAddInstitution;
+	private WebElement btnAddInstitution;
 	
 	@FindBy(xpath="//input[@placeholder='Search by Institution']")
-	WebElement searchInstitutionBox;
+	private WebElement searchInstitutionBox;
 	
 	@FindBy(id = "name")
-	WebElement institutionName;
+	private WebElement institutionName;
 	
 	@FindBy(id = "code")
-	WebElement institutionCode;
+	private WebElement institutionCode;
 	
 	@FindBy(id = "address")
-	WebElement institutionAddress;
+	private WebElement institutionAddress;
 	
 	@FindBy(xpath = "//button[@role='combobox']")
-	WebElement isStore;
+	private WebElement isStore;
 	
 	@FindBy(xpath = "//select/option[text()='No']")
-	WebElement options;
+	private WebElement options;
 	
 	@FindBy(xpath="//button[text()='Browse Files']")
-	WebElement browseElement;
+	private WebElement browseElement;
 	
 	@FindBy(xpath="//button[text()='Save']")
-	WebElement btnSave;
+	private WebElement btnSave;
 	
 	@FindBy(xpath="//div[text()='Institution added successfully.']")
-	WebElement institutionAddedMessage;
+	private WebElement institutionAddedMessage;
 	
 	@FindBy(xpath="(//button[@aria-label='Edit'])[1]")
-	WebElement btnEdit;
+	private WebElement btnEdit;
 	
 	@FindBy(xpath = "//button[text()='Update']")
-	WebElement btnUpdate;
+	private WebElement btnUpdate;
 	
 	@FindBy(xpath="//div[text()='Institution updated successfully.']")
-	WebElement institutionUpdateddMessage;
+	private WebElement institutionUpdateddMessage;
 	
 	@FindBy(xpath="(//button[@aria-label='Delete'])[1]")
-	WebElement btnDelete;	
+	private WebElement btnDelete;	
 	
 	@FindBy(xpath="//button[text()='OK']")
-	WebElement btnOk;
+	private WebElement btnOk;
 	
 	@FindBy(xpath="//div[text()='Institution deleted successfully.']")
-	WebElement institutionDeletedMessage;
+	private WebElement institutionDeletedMessage;
 
 	
 	
