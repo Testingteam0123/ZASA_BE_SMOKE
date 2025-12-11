@@ -21,7 +21,7 @@ public class InstitutionTest extends BaseTest{
     String code=f.code().asin();
 	
 	
-	@Test
+	@Test(priority = 1)
 	public void verifyAddInstitution()
 	{
 		ExtentTest test=  ExtentTestListener.getTest();
