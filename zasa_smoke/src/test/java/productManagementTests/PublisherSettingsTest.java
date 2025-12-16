@@ -1,18 +1,16 @@
 package productManagementTests;
 
 import org.testng.annotations.Test;
+
 import org.testng.Assert;
-import org.testng.AssertJUnit;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.ExtentTest;
 import com.github.javafaker.Faker;
 
 import baseTest.BaseTest;
 import commonObjects.SidePages;
+import productManagementObjects.ColorSettings;
 import productManagementObjects.PublisherSettings;
 import utilities.ExtentTestListener;
 
@@ -20,20 +18,12 @@ import utilities.ExtentTestListener;
 public class PublisherSettingsTest extends BaseTest{
 	
 	
-	@DataProvider(name="datas")
-	public Object[][] publishData()
-	{
-		Object[][] pubData= new Object [1][1];
-		Faker f= new Faker();
-		for(int i=0;i<1;i++)
-		{
-			pubData[i][0]=f.name().lastName();
-		}
-		return pubData;
-	}
+	Faker f= new Faker();
+	String name=f.name().lastName();
+	String name1=f.name().lastName();
 	
-	@Test(dataProvider = "datas")
-	public void verifyAddPublisherfunctionality(String name)
+	@Test(priority = 1)
+	public void verifyAddPublisherfunctionality()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
@@ -45,7 +35,7 @@ public class PublisherSettingsTest extends BaseTest{
 		ps.createPublisher(name);
 		
 		String expectedMessage=ps.getpublisherAddedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Publisher added successfully.");
+		Assert.assertEquals(expectedMessage, "Publisher added successfully.");
 		
 		test.pass("Publisher added successfully");
 		}
@@ -56,8 +46,8 @@ public class PublisherSettingsTest extends BaseTest{
 		}
 	}
 	
-	@Test(dataProvider = "datas")
-	public void verifyEditPublisherfunctionality(String name)
+	@Test(priority =2)
+	public void verifyEditPublisherfunctionality()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
@@ -66,11 +56,11 @@ public class PublisherSettingsTest extends BaseTest{
 	    	test.info("Opening the Product Settings page");
 		sp.openProductSettingspage();
 		test.info("Editing the publisher name");
-		ps.editPublisher(name);
+		ps.editPublisher(name1);
 	    
 		
 		String expectedMessage=ps.getPublisherUpdatedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Publisher updated successfully.");
+		Assert.assertEquals(expectedMessage, "Publisher updated successfully.");
 		test.pass("Publisher updated successfully");
 	    }
 	    catch(Exception e)
@@ -81,7 +71,62 @@ public class PublisherSettingsTest extends BaseTest{
 		
 	}
 	
-	@Test
+	
+	
+	@Test(priority = 3)
+	public void verifyStatusChangeFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		PublisherSettings ps= new PublisherSettings(driver);
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Checking the Status function");
+		ps.changeStatus();
+		String expectedmessage=ps.getpublisherStatusUpdatedMessage();
+		Assert.assertEquals(expectedmessage, "Publisher status updated successfully.");
+		test.pass("Publisher status updated successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	
+	
+	@Test(priority = 4)
+	public void verifySearchFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		PublisherSettings ps= new PublisherSettings(driver);
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Check the search box function");
+		ps.checkSearchBox(name1);
+		test.pass("Search box function working successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	
+	@Test(priority =5)
 	public void verifyDeletePublisherfunctionality()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
@@ -94,7 +139,7 @@ public class PublisherSettingsTest extends BaseTest{
 		
 		ps.deletePublisher();
 		String expectedMessage=ps.getPublisherDeletedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Publisher deleted successfully.");
+		Assert.assertEquals(expectedMessage, "Publisher deleted successfully.");
 		test.pass("Publisher deleted successfully.");
 		}
 		catch(Exception e)

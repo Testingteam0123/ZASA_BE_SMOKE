@@ -64,7 +64,11 @@ public class ProductPage extends BasePage {
 
 	@FindBy(xpath = "(//div[contains(@role,'menuitem')])[3]")
 	private WebElement deleteButton;
+	
+	@FindBy(xpath = "(//div[contains(@role,'menuitem')])[1]")
+	private WebElement previewButton;
 
+	
 	@FindBy(xpath = "//button[text()='OK']")
 	private WebElement confirmDeleteButton;
 
@@ -161,12 +165,33 @@ public class ProductPage extends BasePage {
 	
 	@FindBy(xpath="//li[contains(@class,'group toast')]//div//div[text()='Policy updated successfully.']")
 	private WebElement policyUpdateMessage;
+	
+	@FindBy(xpath="//div[@class='relative']//input")
+	private WebElement searchBox;
+	
+	@FindBy(xpath="(//button[@role='switch'])[1]")
+	private WebElement statusbtn;
+	
+	@FindBy(xpath="//div[text()='Product status updated successfully.']")
+	private WebElement productStatusUpdatedMessage;
+	
+	@FindBy(xpath="//button//span[text()='Export']")
+	private WebElement exportButton;
+	
+	@FindBy(xpath="//button[text()='Export as Pdf']")
+	private WebElement exportAsPdf;
+	
+	@FindBy(xpath="//button[text()='Export as CSV']")
+	private WebElement exportAsCSV;
+
+
+	
+	
 
 	// add stationary
 	public void addStationaryProduct(String name, String price, String imagePath) {
 		//wait.visibilityOf(loginSuccessMessage, 5);
 		driver.navigate().refresh();
-		Properties p= new Properties();
 		btnAddProduct.click();
 		txtProductname.sendKeys(name);
 		Select select = new Select(selectStationery);
@@ -291,5 +316,42 @@ public class ProductPage extends BasePage {
 		WebElement msg = wait.until(ExpectedConditions.visibilityOf(policyUpdateMessage));
 		return msg.getText();
 	}
+	
+	public void checkSearchBox(String name)
+	{
+		searchBox.sendKeys(name);
+	}
+	
+	public String getProductStatusUpdatedMessage()
+	{
+		wait.visibilityOf(productStatusUpdatedMessage, 3);
+		return productStatusUpdatedMessage.getText();
+		
+	}
+	
+	public void changeStatus()
+	{
+		statusbtn.sendKeys(Keys.SPACE);
+	}
+	
+	public void previewProduct() {
+		actionButton.click();
+		previewButton.click();
+		driver.navigate().refresh();
+
+	}
+	
+	public void exportPDF()
+	{
+		exportButton.click();
+		exportAsPdf.click();
+	}
+	
+	public void exportCSV()
+	{
+		exportButton.click();
+		exportAsCSV.click();
+	}
+
 
 }

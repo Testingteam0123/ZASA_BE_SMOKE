@@ -1,5 +1,6 @@
 package productManagementObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,6 +55,16 @@ public class EditionSettings extends BasePage{
 	@FindBy(xpath="//div[text()='Edition added successfully.']")
 	private WebElement editionAddedMessage;
 	
+	@FindBy(xpath="//div[@class='relative']//input")
+	private WebElement searchBox;
+	
+	@FindBy(xpath="(//button[@role='switch'])[1]")
+	private WebElement statusbtn;
+	
+	@FindBy(xpath="//div[text()='Edition status updated successfully.']")
+	private WebElement editionStatusUpdatedMessage;
+
+	
 	
 
 	public void createEdition(String name)
@@ -92,9 +103,24 @@ public class EditionSettings extends BasePage{
 		return editionDeletedMessage.getText();
 	}
 	
+	public String getEditionStatusUpdatedMessage() {
+		wait.visibilityOf(editionStatusUpdatedMessage, 5);
+		return editionStatusUpdatedMessage.getText();
+	}
+	
 	public String getEditionAddedMessage() {
 		wait.visibilityOf(editionAddedMessage, 5);
 		return editionAddedMessage.getText();
+	}
+	
+	public void checkSearchBox(String name)
+	{
+		searchBox.sendKeys(name);
+	}
+
+	public void changeStatus()
+	{
+		statusbtn.sendKeys(Keys.SPACE);
 	}
 
 }

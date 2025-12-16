@@ -1,5 +1,6 @@
 package productManagementObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,6 +55,15 @@ public class PublisherSettings extends BasePage{
 	@FindBy(xpath="//div[text()='Publisher added successfully.']")
 	private WebElement publisherAddedMessage;
 	
+	@FindBy(xpath="//div[@class='relative']//input")
+	private WebElement searchBox;
+	
+	@FindBy(xpath="(//button[@role='switch'])[1]")
+	private WebElement statusbtn;
+	
+	@FindBy(xpath="//div[text()='Publisher status updated successfully.']")
+	private WebElement publisherStatusUpdatedMessage;
+	
 	
 	public void createPublisher(String name)
 	{
@@ -99,5 +109,21 @@ public class PublisherSettings extends BasePage{
 	{
 		wait.visibilityOf(publisherAddedMessage, 5);
 		return publisherAddedMessage.getText();
+	}
+	
+	public void checkSearchBox(String name)
+	{
+		searchBox.sendKeys(name);
+	}
+
+	public void changeStatus()
+	{
+		statusbtn.sendKeys(Keys.SPACE);
+	}
+	
+	public String getpublisherStatusUpdatedMessage()
+	{
+		wait.visibilityOf(publisherStatusUpdatedMessage, 5);
+		return publisherStatusUpdatedMessage.getText();
 	}
 }

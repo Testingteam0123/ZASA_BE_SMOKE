@@ -1,5 +1,6 @@
 package productManagementObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -54,6 +55,17 @@ public class TypeSettings extends BasePage {
 	
 	@FindBy(xpath="//div[text()='Type deleted successfully.']")
 	private WebElement typeDeletedMessage;
+	
+	@FindBy(xpath="//div[@class='relative']//input")
+	private WebElement searchBox;
+	
+	
+	@FindBy(xpath="(//button[@role='switch'])[1]")
+	private WebElement statusbtn;
+	
+	
+	@FindBy(xpath="//div[text()='Type status updated successfully.']")
+	private WebElement typeStatusUpdatedMessage;
 
 	public void verifyAddNewType(String typeName) {
 		selectType.click();
@@ -99,6 +111,21 @@ public class TypeSettings extends BasePage {
 		return typeAddedMessage.getText();
 	}
 	
+	public void checkSearchBox(String name)
+	{
+		searchBox.sendKeys(name);
+	}
 	
+	public String getTypeStatusUpdatedMessage()
+	{
+		wait.visibilityOf(typeStatusUpdatedMessage, 3);
+		return typeStatusUpdatedMessage.getText();
+		
+	}
+	
+	public void changeStatus()
+	{
+		statusbtn.sendKeys(Keys.SPACE);
+	}
 
 }

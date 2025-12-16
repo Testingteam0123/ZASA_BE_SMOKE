@@ -3,7 +3,6 @@ package productManagementTests;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -17,20 +16,16 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class ColorSettingsTest extends BaseTest {
 
-	@DataProvider(name = "datas")
-	public Object[][] data() {
-		Faker f = new Faker();
-		Object[][] data = new Object[1][2];
+	
+	
+	
+	Faker f= new Faker();
+    String color="#" + f.color().name();
+    String color2="#" + f.color().name();
+    String code=f.color().hex();
 
-		for (int i = 0; i < 1; i++) {
-			data[i][0] = "#" + f.color().name();
-			data[i][1] = f.color().hex();
-		}
-		return data;
-	}
-
-	@Test(dataProvider = "datas", priority = 1)
-	public void verifyAddColorfunctionality(String colorName, String colorCode) {
+	@Test(priority = 1)
+	public void verifyAddColorfunctionality() {
 
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
@@ -40,7 +35,7 @@ public class ColorSettingsTest extends BaseTest {
 		test.info("Opening the Product Settings page");
 		sp.openProductSettingspage();
 		test.info("Adding the color details");
-		cs.enterColorName(colorName, colorCode);
+		cs.enterColorName(color, code);
 		
 		String expectedmessage=cs.getColorAddedMessage();
 		Assert.assertEquals(expectedmessage, "Color added successfully.");
@@ -68,8 +63,8 @@ public class ColorSettingsTest extends BaseTest {
 		sp.openProductSettingspage();
 
 		test.info("Editing the color details");
-		cs.editColoring("#yellow", "#y10");
-		cs.statusChange();
+		cs.editColoring(color2, code);
+		cs.changeStatus();
 		String expectedmessage=cs.getColorUpdatedMessage();
 		Assert.assertEquals(expectedmessage, "Color updated successfully.");
 		test.pass("Color updated successfully.");
@@ -82,8 +77,62 @@ public class ColorSettingsTest extends BaseTest {
 		}
 
 	}
-
+	
+	
 	@Test(priority = 3)
+	public void verifyStatusChangeFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		ColorSettings cs = new ColorSettings(driver);
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Checking the Status function");
+		cs.changeStatus();
+		String expectedmessage=cs.getColorStatusUpdatedMessage();
+		Assert.assertEquals(expectedmessage, "Colour status updated successfully.");
+		test.pass("Colour status updated successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	
+	
+	@Test(priority = 4)
+	public void verifySearchFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		ColorSettings cs = new ColorSettings(driver);
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Check the search box function");
+		cs.checkSearchBox(color2);
+		test.pass("Search box function working successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+
+	@Test(priority = 5)
 	public void verifyDeleteColor() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
@@ -96,6 +145,7 @@ public class ColorSettingsTest extends BaseTest {
 		cs.deleteColoring();
 		String expectedmeessage=cs.getColorDeletedMessage();
 		Assert.assertEquals(expectedmeessage, "Colour deleted successfully.");
+		test.pass("Colour deleted successfully.");
 		}
 		catch(Exception e)
 		{
@@ -103,5 +153,8 @@ public class ColorSettingsTest extends BaseTest {
 			throw e;
 		}
 	}
+	
+	
+	
 
 }

@@ -3,12 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="userManagementTests.InstitutionTest">
+      <class name="productManagementTests.ProductsTest">
         <methods>
-          <include name="verifyInstitutionDeleteFunction"/>
+          <include name="verifyEditProduct"/>
+          <include name="checkThePolicyUpdateFunction"/>
+          <include name="verifySearchFunction"/>
           <include name="setup"/>
+          <include name="verifyAddStationaryProduct"/>
+          <include name="verifyPreviewProduct"/>
+          <include name="verifyStatusChangeFunction"/>
+          <include name="verifyDeleteProduct"/>
         </methods>
-      </class> <!-- userManagementTests.InstitutionTest -->
+      </class> <!-- productManagementTests.ProductsTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

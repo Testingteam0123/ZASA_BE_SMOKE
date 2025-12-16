@@ -1,111 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-11T14:10:23 IST" name="Default suite" finished-at="2025-12-11T14:10:35 IST" duration-ms="11395">
+  <suite started-at="2025-12-16T17:30:57 IST" name="Default suite" finished-at="2025-12-16T17:31:11 IST" duration-ms="14799">
     <groups>
     </groups>
-    <test started-at="2025-12-11T14:10:23 IST" name="Default test" finished-at="2025-12-11T14:10:35 IST" duration-ms="11395">
-      <class name="userManagementTests.InstitutionTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:userManagementTests.InstitutionTest@2650f79]" started-at="2025-12-11T14:10:24 IST" name="setup" finished-at="2025-12-11T14:10:27 IST" duration-ms="2931" status="PASS">
+    <test started-at="2025-12-16T17:30:57 IST" name="Default test" finished-at="2025-12-16T17:31:11 IST" duration-ms="14799">
+      <class name="productManagementTests.ProductsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:30:57 IST" name="setup" finished-at="2025-12-16T17:31:00 IST" duration-ms="2742" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAddInstitution()[pri:1, instance:userManagementTests.InstitutionTest@2650f79]" started-at="2025-12-11T14:10:27 IST" name="verifyAddInstitution" finished-at="2025-12-11T14:10:29 IST" duration-ms="2050" status="PASS">
+        <test-method signature="verifyAddStationaryProduct()[pri:1, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:00 IST" name="verifyAddStationaryProduct" finished-at="2025-12-16T17:31:04 IST" duration-ms="3968" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddInstitution -->
-        <test-method signature="verifySearchBoxFunctionality()[pri:2, instance:userManagementTests.InstitutionTest@2650f79]" started-at="2025-12-11T14:10:29 IST" name="verifySearchBoxFunctionality" finished-at="2025-12-11T14:10:29 IST" duration-ms="447" status="PASS">
+        </test-method> <!-- verifyAddStationaryProduct -->
+        <test-method signature="verifyEditProduct()[pri:2, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:04 IST" name="verifyEditProduct" finished-at="2025-12-16T17:31:06 IST" duration-ms="2136" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifySearchBoxFunctionality -->
-        <test-method signature="verifyEditInstitudefunction()[pri:3, instance:userManagementTests.InstitutionTest@2650f79]" started-at="2025-12-11T14:10:29 IST" name="verifyEditInstitudefunction" finished-at="2025-12-11T14:10:30 IST" duration-ms="739" status="PASS">
+        </test-method> <!-- verifyEditProduct -->
+        <test-method signature="verifyStatusChangeFunction()[pri:3, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:06 IST" name="verifyStatusChangeFunction" finished-at="2025-12-16T17:31:07 IST" duration-ms="673" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyEditInstitudefunction -->
-        <test-method signature="verifyInstitutionDeleteFunction()[pri:4, instance:userManagementTests.InstitutionTest@2650f79]" started-at="2025-12-11T14:10:30 IST" name="verifyInstitutionDeleteFunction" finished-at="2025-12-11T14:10:34 IST" duration-ms="4168" status="FAIL">
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[target frame detached
-  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
-  (Session info: chrome=130.0.6723.58)
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '11.0.27'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5b92f8afadc5f2e9d98f2471c9ada834, findElement {using=xpath, value=//div[text()='Institution deleted successfully.']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37175}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37175/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b92f8afadc5f2e9d98f2471c9ada834]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: target frame detached
-  (failed to check if window was closed: disconnected: Unable to receive message from renderer)
-  (Session info: chrome=130.0.6723.58)
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '11.0.27'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5b92f8afadc5f2e9d98f2471c9ada834, findElement {using=xpath, value=//div[text()='Institution deleted successfully.']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:37175}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:37175/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5b92f8afadc5f2e9d98f2471c9ada834
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy15.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:308)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:294)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:291)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at utilities.WaitHelper.visibilityOf(WaitHelper.java:29)
-at userManagementObjects.InstitutionPage.getInstitutionDeletedMessage(InstitutionPage.java:159)
-at userManagementTests.InstitutionTest.verifyInstitutionDeleteFunction(InstitutionTest.java:116)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+        </test-method> <!-- verifyStatusChangeFunction -->
+        <test-method signature="verifySearchFunction()[pri:4, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:07 IST" name="verifySearchFunction" finished-at="2025-12-16T17:31:07 IST" duration-ms="431" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyInstitutionDeleteFunction -->
-      </class> <!-- userManagementTests.InstitutionTest -->
+        </test-method> <!-- verifySearchFunction -->
+        <test-method signature="checkThePolicyUpdateFunction()[pri:5, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:07 IST" name="checkThePolicyUpdateFunction" finished-at="2025-12-16T17:31:08 IST" duration-ms="913" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkThePolicyUpdateFunction -->
+        <test-method signature="verifyPreviewProduct()[pri:6, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:08 IST" name="verifyPreviewProduct" finished-at="2025-12-16T17:31:09 IST" duration-ms="621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPreviewProduct -->
+        <test-method signature="verifyDeleteProduct()[pri:7, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:09 IST" name="verifyDeleteProduct" finished-at="2025-12-16T17:31:11 IST" duration-ms="2087" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyDeleteProduct -->
+        <test-method signature="verifyTheExportfunctionOfPDF()[pri:8, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:11 IST" name="verifyTheExportfunctionOfPDF" finished-at="2025-12-16T17:31:11 IST" duration-ms="463" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheExportfunctionOfPDF -->
+        <test-method signature="verifyTheExportfunctionOfCSV()[pri:9, instance:productManagementTests.ProductsTest@79079097]" started-at="2025-12-16T17:31:11 IST" name="verifyTheExportfunctionOfCSV" finished-at="2025-12-16T17:31:11 IST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheExportfunctionOfCSV -->
+      </class> <!-- productManagementTests.ProductsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

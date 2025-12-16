@@ -14,6 +14,8 @@ import com.github.javafaker.Faker;
 
 import baseTest.BaseTest;
 import commonObjects.SidePages;
+import productManagementObjects.ColorSettings;
+import productManagementObjects.SizeSettings;
 import productManagementObjects.TypeSettings;
 import utilities.ExtentTestListener;
 
@@ -22,19 +24,15 @@ import utilities.ExtentTestListener;
 public class TypeSettingsTest extends BaseTest{
  
 
-	
-	@DataProvider(name = "typedata")
-	public Object[][] typeData() {
-		Faker f = new Faker();
-		Object[][] data = new Object[1][1];
-		for (int i = 0; i < 1; i++) {
-			data[i][0] = f.commerce().department();
-		}
-		return data;
-	}
 
-	@Test(dataProvider = "typedata")
-	public void verifyAddTypefunctionality(String typedata) {
+	
+	Faker f= new Faker();
+	String typedata=f.commerce().department();
+	String typedata2=f.commerce().department();
+	
+
+	@Test
+	public void verifyAddTypefunctionality() {
 		 
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
@@ -49,7 +47,7 @@ public class TypeSettingsTest extends BaseTest{
 	       test.info("Adding the new type");
 		ts.verifyAddNewType(typedata);	
 		String expectedMessage=ts.getTypeAddedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Type added successfully.");
+		Assert.assertEquals(expectedMessage, "Type added successfully.");
 		
 		
 		test.pass("Type added successfully");
@@ -61,8 +59,8 @@ public class TypeSettingsTest extends BaseTest{
 		}
 	}
 	
-	@Test(dataProvider = "typedata",priority = 2)
-	public void verifyEditTypefunctionality(String typedata) {
+	@Test(priority = 2)
+	public void verifyEditTypefunctionality() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
 		TypeSettings ts = new TypeSettings(driver);
@@ -73,10 +71,10 @@ public class TypeSettingsTest extends BaseTest{
         sp.openProductSettingspage();
 			
         test.info("Editing the type");
-		ts.verifyEditType(typedata);
+		ts.verifyEditType(typedata2);
 		
 		String expectedMessage=ts.getTypeUpdatedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Type updated successfully.");
+		Assert.assertEquals(expectedMessage, "Type updated successfully.");
 		
 		test.pass("Type edited successfully");
 		}
@@ -89,6 +87,60 @@ public class TypeSettingsTest extends BaseTest{
 	}
 	
 	@Test(priority = 3)
+	public void verifyStatusChangeFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		TypeSettings ts = new TypeSettings(driver);
+		
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Checking the Status function");
+		ts.changeStatus();
+		String expectedmessage=ts.getTypeStatusUpdatedMessage();
+		Assert.assertEquals(expectedmessage, "Type status updated successfully.");
+		test.pass("Type status updated successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	
+	 @Test(priority = 4)
+		public void verifySearchFunction() {
+			ExtentTest test = ExtentTestListener.getTest();
+			SidePages sp= new SidePages(driver);
+			TypeSettings ts = new TypeSettings(driver);
+			
+			try {
+				
+			test.info("Opening the Product Settings page");
+			sp.openProductSettingspage();
+
+			test.info("Check the search box function");
+			ts.checkSearchBox(typedata2);
+			test.pass("Search box function working successfully.");
+			
+			}
+			catch(Exception e)
+			{
+				Assert.fail("Failed"+e.getMessage());
+				throw e;
+			}
+
+		}
+	
+	
+	
+	@Test(priority = 5)
 	public void verifyDeleteTypefunctionality() {
 		
 		ExtentTest test = ExtentTestListener.getTest();
@@ -103,7 +155,7 @@ public class TypeSettingsTest extends BaseTest{
 	    test.info("Deleting the type");
 		ts.verifyDeleteType();
 		String expectedMessage=ts.getTypeDeletedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Type deleted successfully.");
+		Assert.assertEquals(expectedMessage, "Type deleted successfully.");
 		test.pass("Type deleted successfully");
 		}
 		catch(Exception e)

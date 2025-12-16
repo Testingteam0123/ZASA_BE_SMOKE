@@ -16,82 +16,102 @@ public class SidePages extends BasePage {
 	// ======================
 
 	@FindBy(xpath = "//span[text()='Product Management']")
-	WebElement btnProductManagement;
+	private WebElement btnProductManagement;
 
 	@FindBy(xpath = "//button[text()='Product Settings']")
-	WebElement brnProductSettings;
+	private WebElement brnProductSettings;
 
 	@FindBy(xpath = "(//button[text()='Weight Management'])[1]")
-	WebElement btnWeightManagement;
+	private WebElement btnWeightManagement;
 
 	@FindBy(xpath = "//button[text()='Product']")
-	WebElement btnProduct;
+	private WebElement btnProduct;
 
 	@FindBy(xpath = "(//button[text()='Product Barcode Printing'])[1]")
-	WebElement btnProductBarcodePrinting;
+	private WebElement btnProductBarcodePrinting;
 
 	@FindBy(xpath = "//span[text()='Quotation & Purchase']")
-	WebElement btnQuotationAndPurchase;
+	private WebElement btnQuotationAndPurchase;
 	
 	@FindBy(xpath="//*[text()='Quotation Management']")
-	WebElement btnQuotationManagement;
+	private WebElement btnQuotationManagement;
 	
 	@FindBy(xpath="//*[text()='Purchase Management']")
-	WebElement btnPurchaseManagement;
+	private WebElement btnPurchaseManagement;
 	
 	@FindBy(xpath="//*[text()='Purchase Return']")
-	WebElement btnPurchaseReturn;
+	private WebElement btnPurchaseReturn;
 	
 	@FindBy(xpath = "//span[text()='Stock Management']")
-	WebElement btnStockManagement;
+	private WebElement btnStockManagement;
 	
 	@FindBy(xpath = "(//*[text()='Stocks'])[1]")
-	WebElement btnStocks;
+	private WebElement btnStocks;
 	
 	@FindBy(xpath="//*[text()='Mark Dead Stock']")
-	WebElement btnMarkDeadStock;
+	private WebElement btnMarkDeadStock;
 	
 	@FindBy(xpath="//span[text()='Order Management']")
-	WebElement btnOrderManagement;
+	private WebElement btnOrderManagement;
 	
 	@FindBy(xpath="//*[text()='Orders']")
-	WebElement btnOrders;
+	private WebElement btnOrders;
 	
 	@FindBy(xpath="//button[text()='Order Status Scanner']")
-	WebElement btnOrderStatusScanner;
+	private WebElement btnOrderStatusScanner;
 	
 	@FindBy(xpath="//button[text()='Exchange']")
-	WebElement btnExchange;
+	private WebElement btnExchange;
 	
 	@FindBy(xpath="//button[text()='Return']")
-	WebElement btnReturn;
+	private WebElement btnReturn;
 	
 	@FindBy(xpath="//button[text()='Scan to Pack']")
-	WebElement btnScanToPack;
+	private WebElement btnScanToPack;
 	
 	@FindBy(xpath="//button[text()='Customer']")
-	WebElement btnCustomer;
+	private WebElement btnCustomer;
 	
 	@FindBy(xpath="//span[text()='Settings']")
-	WebElement btnSettings;
+	private WebElement btnSettings;
 	
 	@FindBy(xpath="(//button[text()='Rate Management'])[1]")
-	WebElement btnRateManagement;
+	private WebElement btnRateManagement;
 	
 	@FindBy(xpath="(//button[text()='Discount Coupon'])[1]")
-	WebElement btnDiscountCoupon;
+	private WebElement btnDiscountCoupon;
 	
 	@FindBy(xpath="(//button[text()='Order Settings'])[1]")
-	WebElement btnOrderSettings;
+	private WebElement btnOrderSettings;
 	
 	@FindBy(xpath="(//button[text()='Email Settings'])[1]")
-	WebElement btnEmailSettings;
+	private WebElement btnEmailSettings;
 	
 	@FindBy(xpath="(//button[text()='Delivery Partner'])[1]")
-	WebElement btnDeliveryPartner;
+	private WebElement btnDeliveryPartner;
 	
 	@FindBy(xpath="//span[text()='User Management']")
-	WebElement btnUserManagement;
+	private WebElement btnUserManagement;
+	
+	@FindBy(xpath = "//button//span[text()='Reports']")
+	private WebElement btnReports;
+	
+	@FindBy(xpath="//button//span[text()='Stocks']")
+	private WebElement btnStockss;
+	
+	@FindBy(xpath="(//button[text()='Sub Store Stock Report'])[1]")
+	private WebElement btnSubStoreReport;
+	
+	@FindBy(xpath="(//button[text()='Main Store Stock Report'])[1]")
+	private WebElement btnMainStoreReport;
+	
+	@FindBy(xpath = "(//button[text()='Category Wise Report'])[1]")
+	private WebElement btnCategoryWiseReport;
+	
+	@FindBy(xpath="(//button[text()='Stock Allotment Report'])[1]")
+	private WebElement btnStockAllotmentReport;
+	
+	
 	
 	
 	
@@ -217,4 +237,31 @@ public class SidePages extends BasePage {
 		btnUserManagement.click();
 	}
 	
+	public void openSubStoreStockReport()
+	{
+		btnReports.click();
+		btnStockss.click();
+		btnSubStoreReport.click();
+	}
+	
+	public void openMainStoreStockReport()
+	{
+		btnReports.click();
+		btnStockss.click();
+		btnMainStoreReport.click();
+	}
+	
+	public void openCategoryWiseReport()
+	{
+		btnReports.click();
+		btnStockss.click();
+		btnCategoryWiseReport.click();
+	}
+	
+	public void openStockAllotmentReport()
+	{
+		btnReports.click();
+		btnStockss.click();
+		btnStockAllotmentReport.click();
+	}
 }

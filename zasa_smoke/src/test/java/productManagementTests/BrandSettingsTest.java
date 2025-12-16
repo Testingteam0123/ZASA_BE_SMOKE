@@ -3,7 +3,6 @@ package productManagementTests;
 import org.testng.annotations.Test;
 import org.testng.Assert;
 
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Listeners;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -12,35 +11,30 @@ import com.github.javafaker.Faker;
 import baseTest.BaseTest;
 import commonObjects.SidePages;
 import productManagementObjects.BrandSettings;
+import productManagementObjects.ColorSettings;
 import utilities.ExtentTestListener;
 
 @Listeners(ExtentTestListener.class)
 public class BrandSettingsTest extends BaseTest {
 
-	@DataProvider(name = "brandDatas")
-	public Object[][] branddata() {
-		Faker f = new Faker();
-		Object[][] branddata = new Object[1][5];
-		for (int i = 0; i < 1; i++) {
-			branddata[i][0] = f.name().firstName();
-			branddata[i][1] = f.internet().emailAddress();
-			branddata[i][2] = f.number().digits(5);
-			branddata[i][3] = f.name().fullName();
-			branddata[i][4] = "9" + f.phoneNumber().subscriberNumber(8);
-		}
-		return branddata;
-	}
-
-	@Test(dataProvider = "brandDatas")
-	public void verifyAddBrandfunctionality(String name, String email, String code, String continfo, String phoneNo) {
+	Faker f = new Faker();
+	String name=f.name().firstName();
+	String name2=f.name().firstName();
+	String email= f.internet().emailAddress();
+	String code=f.number().digits(5);
+	String fullname=f.name().fullName();
+	String phoneno="9" + f.phoneNumber().subscriberNumber(8);
+	
+	@Test(priority = 1)
+	public void verifyAddBrandfunctionality() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
 		BrandSettings bs = new BrandSettings(driver);
 		try {
 			test.info("Opening the Product Settings page");
 			sp.openProductSettingspage();
-			test.info("Adding Brand details");
-			bs.enterBrand(name, email, code, continfo, phoneNo);
+			test.info("Check the Adding Brand function details");
+			bs.enterBrand(name, email, code, fullname, phoneno);
 			String expectedmessage = bs.getBrandAddedMessage();
 			Assert.assertEquals(expectedmessage, "Brand added successfully.");
 		} catch (Exception e) {
@@ -48,4 +42,93 @@ public class BrandSettingsTest extends BaseTest {
 			throw e;
 		}
 	}
+	
+	@Test(priority = 2)
+	public void verifyTheEditFunctonality()
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		BrandSettings bs = new BrandSettings(driver);
+		try {
+			test.info("Opening the Product Settings page");
+			sp.openProductSettingspage();
+			test.info("Check the edit Brand function");
+			bs.editBrand(name2);
+			String expectedmessage = bs.getbrandUpdatedMessage();
+			Assert.assertEquals(expectedmessage, "Brand updated successfully.");
+		} catch (Exception e) {
+			Assert.fail("Failed" + e.getMessage());
+			throw e;
+		}
+	}
+	
+	@Test(priority = 3)
+	public void verifyStatusChangeFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		BrandSettings bs = new BrandSettings(driver);
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Checking the Status function");
+		bs.changeStatus();
+		String expectedmessage=bs.getBrandStatusUpdatedMessage();
+		Assert.assertEquals(expectedmessage, "Brand status updated successfully.");
+		test.pass("Brand status updated successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	@Test(priority = 4)
+	public void verifySearchBoxFunctonality()
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		BrandSettings bs = new BrandSettings(driver);
+		try {
+			test.info("Opening the Product Settings page");
+			sp.openProductSettingspage();
+			test.info("Check the search box function");
+			bs.checkSearchBox(name2);
+		    test.pass("The search box is functioning properly");
+		} catch (Exception e) {
+			Assert.fail("Failed" + e.getMessage());
+			throw e;
+		}
+	}
+	
+	
+	
+	@Test(priority = 5)
+	public void verifyTheDeleteFunctonality()
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		BrandSettings bs = new BrandSettings(driver);
+		try {
+			test.info("Opening the Product Settings page");
+			sp.openProductSettingspage();
+			test.info("Check the Delete Brand function");
+			bs.deleteBrand();
+			
+			String expectedmessage = bs.getBrandDeletedMessage();
+			Assert.assertEquals(expectedmessage, "Brand deleted successfully.");
+			test.pass("Brand deleted successfully.");
+		} catch (Exception e) {
+			Assert.fail("Failed" + e.getMessage());
+			throw e;
+		}
+	}
+	
+	
+	
 }

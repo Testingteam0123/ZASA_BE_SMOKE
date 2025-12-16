@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.AssertJUnit;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -13,26 +13,24 @@ import com.github.javafaker.Faker;
 
 import baseTest.BaseTest;
 import commonObjects.SidePages;
+import productManagementObjects.ColorSettings;
 import productManagementObjects.SizeSettings;
 import utilities.ExtentTestListener;
 
 @Listeners(ExtentTestListener.class)
 public class SizeSettingsTest extends BaseTest {
 
-	@DataProvider(name = "Sizes")
-	public Object[][] data() {
-		Faker f = new Faker();
-		Object[][] data = new Object[1][1];
-		for (int i = 0; i < 1; i++) {
-			int randomSize = f.number().numberBetween(28, 50);
-			data[i][0] = String.valueOf(randomSize); // convert to String if needed
-		}
+	
+	Faker f= new Faker();
+	int randomSize = f.number().numberBetween(28, 32);
+	int randomSize2 = f.number().numberBetween(40, 50);
+	String size = String.valueOf(randomSize);
+	String size2 = String.valueOf(randomSize2);
+	
+	
 
-		return data;
-	}
-
-	 @Test(dataProvider = "Sizes")
-	public void verifyAddSizefunctionality(String size) {
+	 @Test(priority = 1)
+	public void verifyAddSizefunctionality() {
 
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -43,7 +41,7 @@ public class SizeSettingsTest extends BaseTest {
 			test.info("Adding the size");
 			ss.enterSize(size);
 			String expectedMessage = ss.getSizeAddedMessage();
-			AssertJUnit.assertEquals(expectedMessage, "Size added successfully.");
+			Assert.assertEquals(expectedMessage, "Size added successfully.");
 			test.pass("Size added Successfully.");
 		} catch (Exception e) {
 			Assert.fail("Failed: " + e.getMessage());
@@ -64,10 +62,10 @@ public class SizeSettingsTest extends BaseTest {
 		test.info("Opening the Product Settings page");
 		sp.openProductSettingspage();
 		test.info("Editing the size");
-		ss.editSize("42");
+		ss.editSize(size2);
 
 		String expectedMessage = ss.getSizeUpdatedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Size updated successfully.");
+		Assert.assertEquals(expectedMessage, "Size updated successfully.");
 		test.pass("Size updated successfully");
 		}
 		catch(Exception e)
@@ -77,8 +75,60 @@ public class SizeSettingsTest extends BaseTest {
 		}
 
 	}
+	 
+	 @Test(priority = 3)
+		public void verifyStatusChangeFunction() {
+			ExtentTest test = ExtentTestListener.getTest();
+			SidePages sp= new SidePages(driver);
+			SizeSettings ss = new SizeSettings(driver);
+			
+			try {
+				
+			test.info("Opening the Product Settings page");
+			sp.openProductSettingspage();
 
-	@Test(priority = 3)
+			test.info("Checking the Status function");
+			ss.changeStatus();
+			String expectedmessage=ss.getSizeStatusUpdatedMessage();
+			Assert.assertEquals(expectedmessage, "Size status updated successfully.");
+			test.pass("Size status updated successfully.");
+			
+			}
+			catch(Exception e)
+			{
+				Assert.fail("Failed"+e.getMessage());
+				throw e;
+			}
+
+		}
+		
+	 
+	 
+	 @Test(priority = 4)
+		public void verifySearchFunction() {
+			ExtentTest test = ExtentTestListener.getTest();
+			SidePages sp= new SidePages(driver);
+			SizeSettings ss = new SizeSettings(driver);
+			
+			try {
+				
+			test.info("Opening the Product Settings page");
+			sp.openProductSettingspage();
+
+			test.info("Check the search box function");
+			ss.checkSearchBox(size2);
+			test.pass("Search box function working successfully.");
+			
+			}
+			catch(Exception e)
+			{
+				Assert.fail("Failed"+e.getMessage());
+				throw e;
+			}
+
+		}
+	 
+	@Test(priority = 5)
 	public void verifySizeDeleteFunctionality() {
 
 		ExtentTest test = ExtentTestListener.getTest();
@@ -94,7 +144,7 @@ public class SizeSettingsTest extends BaseTest {
 		ss.deleteSize();
 
 		String expectedMessage = ss.getSizeDeletedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Size deleted successfully.");
+		Assert.assertEquals(expectedMessage, "Size deleted successfully.");
 		test.pass("Size deleted successfully");
 		}
 		catch(Exception e)

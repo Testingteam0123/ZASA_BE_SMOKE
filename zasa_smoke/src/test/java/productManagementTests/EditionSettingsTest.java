@@ -2,10 +2,7 @@ package productManagementTests;
 
 import org.testng.annotations.Test;
 import org.testng.Assert;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
-import org.testng.Assert;
-import org.testng.annotations.DataProvider;
+
 import org.testng.annotations.Listeners;
 
 import com.aventstack.extentreports.ExtentTest;
@@ -20,24 +17,16 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class EditionSettingsTest extends BaseTest{
 	
-	
-	@DataProvider(name="editiondata")
-	public Object[][] editionData()
-	{
-		Object [][] editionData= new Object[1][1];
-		Faker f= new Faker();
-		for(int i=0;i<1;i++)
-		{
-		  int editionYear=f.number().numberBetween(1990, 2025);
-		  editionData[i][0]=String.valueOf(editionYear);
-		
-		}
-		return editionData;
-	}
+	Faker f= new Faker();
+	int editionYear=f.number().numberBetween(1990, 2025);
+	int editionYear2=f.number().numberBetween(1980,1989);
+	  String year=String.valueOf(editionYear);
+	  String year1=String.valueOf(editionYear2);
+	  
 	
 	
-	@Test(dataProvider = "editiondata")
-	public void verifyAddEditionfunctionality(String editionName)
+	@Test(priority = 1)
+	public void verifyAddEditionfunctionality()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
@@ -47,10 +36,10 @@ public class EditionSettingsTest extends BaseTest{
 			test.info("Opening the Product Settings page");
 		sp.openProductSettingspage();
 		test.info("Adding the Edition year");	
-		es.createEdition(editionName);
+		es.createEdition(year);
 		
 		String expectedMessage=es.getEditionAddedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Edition added successfully.");
+		Assert.assertEquals(expectedMessage, "Edition added successfully.");
 		test.pass("Edition year added successfully.");
 		}
 		catch(Exception e)
@@ -74,9 +63,9 @@ public class EditionSettingsTest extends BaseTest{
 	       
 	       test.info("Editing the Edition year");
 			
-		es.editEdition("2002");
+		es.editEdition(year1);
 		String expectedMessage=es.getEditionUpdatedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Edition updated successfully.");
+		Assert.assertEquals(expectedMessage, "Edition updated successfully.");
 		test.pass("Edition year updated successfully.");
 		}
 		catch(Exception e)
@@ -87,6 +76,61 @@ public class EditionSettingsTest extends BaseTest{
 	}
 	
 	@Test(priority = 3)
+	public void verifyStatusChangeFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		EditionSettings es= new EditionSettings(driver);
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Checking the Status function");
+		es.changeStatus();
+		String expectedmessage=es.getEditionStatusUpdatedMessage();
+		Assert.assertEquals(expectedmessage, "Edition status updated successfully.");
+		test.pass("Edition status updated successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	
+	
+	@Test(priority = 4)
+	public void verifySearchFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		EditionSettings es= new EditionSettings(driver);
+		
+		try {
+			
+		test.info("Opening the Product Settings page");
+		sp.openProductSettingspage();
+
+		test.info("Check the search box function");
+		es.checkSearchBox(year1);
+		test.pass("Search box function working successfully.");
+		
+		}
+		catch(Exception e)
+		{
+			Assert.fail("Failed"+e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	
+	
+	
+	@Test(priority = 5)
 	public void verifyDeleteEditionfunctionality()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
@@ -101,7 +145,7 @@ public class EditionSettingsTest extends BaseTest{
 		es.deleteEdition();
 		
 		String expectedMessage=es.getEditionDeletedMessage();
-		AssertJUnit.assertEquals(expectedMessage, "Edition deleted successfully.");
+		Assert.assertEquals(expectedMessage, "Edition deleted successfully.");
 		test.pass("Edition year deleted successfully.");
 		}
 		catch(Exception e)

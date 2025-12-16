@@ -1,5 +1,6 @@
 package productManagementObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -60,14 +61,20 @@ public class ColorSettings extends BasePage {
 	@FindBy(xpath="//button[text()='OK']")
 	private WebElement okBtn;
 	
-	//status
-	@FindBy(xpath="(//button[@role='switch'])[1]")
-	private WebElement btnStatus;
+	
 	
 	@FindBy(xpath="//div[text()='Colour deleted successfully.']")
 	private WebElement colorDeletedMessage;
 	
+	@FindBy(xpath="//div[@class='relative']//input")
+	private WebElement searchBox;
 	
+	@FindBy(xpath="(//button[@role='switch'])[1]")
+	private WebElement statusbtn;
+	
+	
+	@FindBy(xpath="//div[text()='Colour status updated successfully.']")
+	private WebElement colorStatusUpdatedMessage;
 
 	public void enterColorName(String color, String code) {
 		btnAddColor.click();
@@ -90,6 +97,7 @@ public class ColorSettings extends BasePage {
 	public void deleteColoring()
 	{
 		btnDelete.click();
+		wait.visibilityOf(okBtn, 5);
 		okBtn.click();
 	}
 	
@@ -98,6 +106,13 @@ public class ColorSettings extends BasePage {
 	{
 		wait.visibilityOf(colorAddedMessage, 3);
 		return colorAddedMessage.getText();
+		
+	}
+	
+	public String getColorStatusUpdatedMessage()
+	{
+		wait.visibilityOf(colorStatusUpdatedMessage, 3);
+		return colorStatusUpdatedMessage.getText();
 		
 	}
 	
@@ -116,9 +131,15 @@ public class ColorSettings extends BasePage {
 		
 	}
 	
-	public void statusChange()
+	
+	
+	public void checkSearchBox(String name)
 	{
-		btnStatus.click();
+		searchBox.sendKeys(name);
 	}
 
+	public void changeStatus()
+	{
+		statusbtn.sendKeys(Keys.SPACE);
+	}
 }

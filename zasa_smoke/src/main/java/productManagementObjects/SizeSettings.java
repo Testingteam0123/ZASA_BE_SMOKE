@@ -1,5 +1,6 @@
 package productManagementObjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -55,6 +56,14 @@ public class SizeSettings extends BasePage {
 	@FindBy(xpath="//div[text()='Size added successfully.']")
 	private WebElement sizeAddedMessage;
 	
+	@FindBy(xpath="//div[@class='relative']//input")
+	private WebElement searchBox;
+	
+	@FindBy(xpath="(//button[@role='switch'])[1]")
+	private WebElement statusbtn;
+	
+	@FindBy(xpath="//div[text()='Size status updated successfully.']")
+	private WebElement sizeStatusUpdatedMessage;
 	
 
 	public void enterSize(String size) {
@@ -72,6 +81,13 @@ public class SizeSettings extends BasePage {
 		editSizeField.sendKeys(newSize);
 		updateBtn.click();
 	}
+	
+	
+	public void checkSearchBox(String name)
+	{
+		searchBox.sendKeys(name);
+	}
+	
 	
 	public String getSizeUpdatedMessage() {
 		wait.visibilityOf(sizeUpdatedMessage, 5);
@@ -93,6 +109,16 @@ public class SizeSettings extends BasePage {
 	public String getSizeAddedMessage() {
 		wait.visibilityOf(sizeAddedMessage, 5);
 		return sizeAddedMessage.getText();
+	}
+	
+	public String getSizeStatusUpdatedMessage() {
+		wait.visibilityOf(sizeStatusUpdatedMessage, 5);
+		return sizeStatusUpdatedMessage.getText();
+	}
+
+	public void changeStatus()
+	{
+		statusbtn.sendKeys(Keys.SPACE);
 	}
 
 }

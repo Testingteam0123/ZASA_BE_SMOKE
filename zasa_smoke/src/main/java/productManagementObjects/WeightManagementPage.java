@@ -27,6 +27,15 @@ public class WeightManagementPage extends BasePage {
 	private WebElement weightUpdatedMessage;
 	
 	
+	@FindBy(xpath = "//div[@class='relative']//input")
+	private WebElement searchBox;
+	
+	@FindBy(xpath="//button//span[text()='Filter']")
+	private WebElement filterOption;
+	
+	@FindBy(xpath="(//input[@class='accent-[#966AC3]'])[3]")
+	private WebElement clickStationary;
+	
 	
 	public void addNewWeight(String weight) 
 	{
@@ -34,10 +43,32 @@ public class WeightManagementPage extends BasePage {
 		btnSave.click();
 	}
 	
+	public void getSearchBox(String name) 
+	{
+		wait.elementToBeClickable(searchBox, 5);
+		searchBox.click();
+		searchBox.sendKeys(name);
+	}
+	
+	
+	
 	public String getWeightUpdatedMessage()
 	{
 	wait.visibilityOf(weightUpdatedMessage, 3);	
 	return weightUpdatedMessage.getText();
 	}
 
+	public void clickfilterOption()
+	{
+		wait.elementToBeClickable(filterOption, 5);
+		filterOption.click();
+	}
+	
+	public void selectStationary()
+	{
+		wait.elementToBeClickable(clickStationary, 5);
+		clickStationary.click();
+		
+	}
+	
 }

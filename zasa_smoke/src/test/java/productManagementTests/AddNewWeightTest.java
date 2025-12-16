@@ -31,7 +31,49 @@ public class AddNewWeightTest extends BaseTest {
 		} catch (Exception e) {
 			Assert.fail("Failed" + e.getMessage());
 			throw e;
+			
 		}
 	}
+	
+	@Test(priority = 2)
+	public void checkTheSearchFunction()
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		WeightManagementPage weightPage = new WeightManagementPage(driver);
+		try {
+			test.info("Opening the Weight Management");
+			sp.openWeightManagementpage();
+			test.info("Check the search function of the weight management module");
+			weightPage.getSearchBox(p.getProperty("WeightMangementSearch"));
+			test.pass("The Search function working finely");
+				
+		} catch (Exception e) {
+			Assert.fail("Failed" + e.getMessage());
+			throw e;
+		}
+	}
+	
+	@Test(priority = 3)
+	public void checkFilterFunctonality() {
+
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		WeightManagementPage weightPage = new WeightManagementPage(driver);
+		try {
+			test.info("Opening the Weight Management");
+			sp.openWeightManagementpage();
+			test.info("Check the filter functon");
+			weightPage.clickfilterOption();
+			weightPage.selectStationary();
+			test.pass("Filter function is working properly");
+		} catch (Exception e) {
+			Assert.fail("Failed" + e.getMessage());
+			throw e;
+		}
+	}
+	
+	
+	
 
 }
