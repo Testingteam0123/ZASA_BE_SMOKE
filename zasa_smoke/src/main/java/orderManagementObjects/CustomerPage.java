@@ -34,6 +34,16 @@ public class CustomerPage extends BasePage{
 	@FindBy(xpath="//div[text()='Found 1 student(s)']")
 	private WebElement searchMessage;
 	
+	@FindBy(xpath="//button[contains(@class,'text-white hover:text')]")
+	private WebElement popCancel;
+	
+	@FindBy(xpath="(//button[contains(@class,'text-[#454661]')])[1]")
+	private WebElement actionBtn;
+	
+	@FindBy(xpath="//h1")
+	private WebElement headTitle;
+	
+	
 	public void enterName(String name)
 	{
 		searchField.sendKeys(name);
@@ -45,13 +55,24 @@ public class CustomerPage extends BasePage{
 		selectSchool.click();
 		enterAdmissionNo.sendKeys(admissionNo);
 		clickSearchButton.click();
+		popCancel.click();
 	}
 	
 	public String getSearchMessage()
 	{
 		wait.visibilityOf(searchMessage, 3);
 		return searchMessage.getText();
-		
+	}
+	
+	public void clickAction()
+	{
+		actionBtn.click();
+	}
+	
+	public String getTitle()
+	{
+		wait.visibilityOf(headTitle, 3);
+		return headTitle.getText();
 	}
 	
 

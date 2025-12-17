@@ -1,5 +1,6 @@
 package quotationManagementObjects;
 
+
 import java.util.List;
 
 import org.openqa.selenium.WebDriver;
@@ -12,7 +13,7 @@ import utilities.WaitHelper;
 
 public class QuotationManagementPage extends BasePage {
 	
-	WaitHelper wait = new WaitHelper(driver);
+	WaitHelper wait= new WaitHelper(driver);
 
 	public QuotationManagementPage(WebDriver driver) {
 		super(driver);
@@ -69,6 +70,13 @@ public class QuotationManagementPage extends BasePage {
 	private WebElement QuotationStatusUpdatedMessage;
 	
 	
+	@FindBy(xpath="(//button[@class='p-1 rounded cursor-pointer'])[1]")
+	private WebElement viewQuotation;
+	
+	@FindBy(xpath="//button[contains(@class,'ring-offset-background')]")
+	private WebElement closeButton;
+	
+	
 	// ======================
 	// METHODS
 	// ======================
@@ -108,7 +116,7 @@ public class QuotationManagementPage extends BasePage {
 		return QuotationAddedMessage.getText();
 	}
 	
-	public void approveStatus(String reason)
+	public void approveStatus(String reason) throws InterruptedException
 	{
 		changeStatus.click();
 		wait.visibilityOf(selectApproved, 3);
@@ -135,6 +143,12 @@ public class QuotationManagementPage extends BasePage {
 	{ 
 		 wait.visibilityOf(QuotationStatusUpdatedMessage, 3);
 		return QuotationStatusUpdatedMessage.getText();
+	}
+	
+	public void viewQuotationDetails()
+	{
+		viewQuotation.click();
+		closeButton.click();
 	}
 
 }

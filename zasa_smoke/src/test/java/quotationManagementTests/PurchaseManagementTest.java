@@ -16,7 +16,7 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class PurchaseManagementTest extends BaseTest{
 	
-	@Test
+	@Test(priority=1)
 	public void addpurchaseManagementTest()
 	{
 		ExtentTest test = ExtentTestListener.getTest();

@@ -3,18 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="productManagementTests.ProductsTest">
+      <class name="quotationManagementTests.QuotationMangementTest">
         <methods>
-          <include name="verifyEditProduct"/>
-          <include name="checkThePolicyUpdateFunction"/>
-          <include name="verifySearchFunction"/>
+          <include name="viewQuotationDetailsFunction"/>
           <include name="setup"/>
-          <include name="verifyAddStationaryProduct"/>
-          <include name="verifyPreviewProduct"/>
-          <include name="verifyStatusChangeFunction"/>
-          <include name="verifyDeleteProduct"/>
         </methods>
-      </class> <!-- productManagementTests.ProductsTest -->
+      </class> <!-- quotationManagementTests.QuotationMangementTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
