@@ -1,7 +1,8 @@
-package stockManagementTests;
+	package stockManagementTests;
 
 import static org.testng.Assert.assertTrue;
 
+import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
@@ -9,6 +10,7 @@ import com.aventstack.extentreports.ExtentTest;
 
 import baseTest.BaseTest;
 import commonObjects.SidePages;
+import settingsObjects.RateManagementPage;
 import stockManagementObjects.StockPage;
 import utilities.ExtentTestListener;
 
@@ -71,4 +73,51 @@ public class StockTest extends BaseTest {
 		}
 	}
 
+	@Test(priority = 4)
+	public void verifyFilterFunctionality()
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sidePages = new SidePages(driver);
+		StockPage stockPage = new StockPage(driver);
+
+		try {
+			test.info("Opening to the stock management module");
+			sidePages.openStocksPage();
+			test.info("Checking the filter function");
+			stockPage.selectBook();
+			test.pass("Filter has been selected successfully.");
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+		}
+		
+	}
+	
+	
+	@Test(priority = 5)
+	public void verifyTheProductInTable() throws Exception
+	{
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sidePages = new SidePages(driver);
+		StockPage stockPage = new StockPage(driver);
+
+		try {
+			test.info("Opening to the stock management module");
+			sidePages.openStocksPage();
+			test.info("Checking the Search Box functionality");
+			stockPage.enterSearch(p.getProperty("productName"));
+			test.pass("Search box function is working successfully");
+			
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+		}
+	}
+	
+	
+	
 }

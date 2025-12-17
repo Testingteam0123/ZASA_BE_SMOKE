@@ -36,6 +36,14 @@ public class RateManagementPage extends BasePage{
 	@FindBy(xpath = "//table//tbody//tr//td[2]/div/div")
 	private List<WebElement> firstRow;
 	
+	@FindBy(xpath="//button//span[text()='Filter']")
+	private WebElement filterBtn;
+	
+	@FindBy(xpath="(//input[@class='accent-[#966AC3]'])[1]")
+	private WebElement bookOption;
+
+	
+	
 	public void enterNewRate(String text) 
 	{
 		textNewRate.sendKeys(text);
@@ -70,6 +78,12 @@ public class RateManagementPage extends BasePage{
 			}
 		}
 		return false;
+	}
+	
+	public void selectBook()
+	{
+		filterBtn.click();	
+		bookOption.click();
 	}
 	
 

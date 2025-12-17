@@ -14,14 +14,39 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class RateManagementTest extends BaseTest{
 	
+	
 	@Test(priority = 1)
+	public void verifyFilterFunctionality()
+	{
+		ExtentTest test= ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		RateManagementPage rp= new RateManagementPage(driver);
+		try {
+			test.info("Navigating to the Rate management page");
+			sp.openRateManagementPage();
+			test.info("Checking the filter function");
+			rp.selectBook();
+			test.pass("Filter has been selected successfully.");
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+		}
+		
+	}
+	
+	
+	
+	
+	@Test(priority = 3)
 	public void verifyEnterNewRateFunctionality()
 	{
 		ExtentTest test= ExtentTestListener.getTest();
 		SidePages sp= new SidePages(driver);
 		RateManagementPage rp= new RateManagementPage(driver);
 		try {
-			test.info("Navigatig to the Rate management page");
+			test.info("Navigating to the Rate management page");
 			sp.openRateManagementPage();
 			test.info("Checking the enter new rate function");
 			rp.enterNewRate("9");

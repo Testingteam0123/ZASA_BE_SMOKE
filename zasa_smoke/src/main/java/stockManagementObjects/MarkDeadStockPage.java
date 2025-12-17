@@ -35,6 +35,15 @@ public class MarkDeadStockPage extends BasePage{
 	
 	@FindBy(xpath="//button[text()='Close']")
 	private WebElement btnClose;
+	
+	@FindBy(xpath="//button//span[text()='Filter']")
+	private WebElement filterBtn;
+	
+	@FindBy(xpath="(//input[@class='accent-[#966AC3]'])[1]")
+	private WebElement bookOption;
+	
+	@FindBy(xpath="//input[contains(@placeholder,'Search')]")
+	private WebElement searchBox;
 
 	
 	public boolean isMarkDeadTableDisplayed() {
@@ -63,6 +72,16 @@ public class MarkDeadStockPage extends BasePage{
 		btnClose.click();
 	}
 	
+	public void selectBook()
+	{
+		filterBtn.click();	
+		bookOption.click();
+	}
+	
+	public void enterSearch(String product)
+	{
+		searchBox.sendKeys(product);
+	}
 	
 
 }

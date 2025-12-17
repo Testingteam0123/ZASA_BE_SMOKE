@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Default_suite" class="navigator-link">
-              <span class="suite-name border-failed">Default suite</span>
+              <span class="suite-name border-passed">Default suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">4 methods, 1 failed,   3 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods failed suite-Default_suite"> (hide)</a> <!-- hide-methods failed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods failed suite-Default_suite"> (show)</a> <!-- show-methods failed suite-Default_suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Default_suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="quotationManagementTests.QuotationMangementTest" class="method navigator-link" hash-for-method="viewQuotationDetailsFunction">viewQuotationDetailsFunction</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Default_suite -->
+                    <span class="method-stats">5 methods,   5 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,17 +103,27 @@
                     <div class="method-list-content passed suite-Default_suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="quotationManagementTests.QuotationMangementTest" class="method navigator-link" hash-for-method="addQuotation">addQuotation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="stockManagementTests.MarkDeadStockTest" class="method navigator-link" hash-for-method="verifyAddMarkDeadFunctionality">verifyAddMarkDeadFunctionality</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="quotationManagementTests.QuotationMangementTest" class="method navigator-link" hash-for-method="approveQuotation">approveQuotation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="stockManagementTests.MarkDeadStockTest" class="method navigator-link" hash-for-method="verifyFilterFunctionality">verifyFilterFunctionality</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="quotationManagementTests.QuotationMangementTest" class="method navigator-link" hash-for-method="deleteQuotation">deleteQuotation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="stockManagementTests.MarkDeadStockTest" class="method navigator-link" hash-for-method="verifyMarkDeadStock">verifyMarkDeadStock</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="stockManagementTests.MarkDeadStockTest" class="method navigator-link" hash-for-method="verifyStockSummaryHistory">verifyStockSummaryHistory</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="stockManagementTests.MarkDeadStockTest" class="method navigator-link" hash-for-method="verifyTheProductInTable">verifyTheProductInTable</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -142,109 +138,45 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">quotationManagementTests.QuotationMangementTest</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="viewQuotationDetailsFunction">
-                  </a> <!-- viewQuotationDetailsFunction -->
-                  <span class="method-name">viewQuotationDetailsFunction</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;
-    text-black hover:text-black
-    cursor-default
-  &quot;&gt;...&lt;/button&gt; is not clickable at point (577, 74). Other element would receive the click: &lt;li tabindex=&quot;0&quot; class=&quot;&quot; data-sonner-toast=&quot;&quot; data-styled=&quot;true&quot; data-mounted=&quot;true&quot; data-promise=&quot;false&quot; data-swiped=&quot;false&quot; data-removed=&quot;false&quot; data-visible=&quot;true&quot; data-y-position=&quot;top&quot; data-x-position=&quot;center&quot; data-index=&quot;0&quot; data-front=&quot;true&quot; data-swiping=&quot;false&quot; data-dismissible=&quot;true&quot; data-type=&quot;success&quot; data-swipe-out=&quot;false&quot; data-expanded=&quot;false&quot; style=&quot;--index: 0; --toasts-before: 0; --z-index: 4; --offset: 0px; --initial-height: 53.5px; background-color: rgb(232, 245, 233); color: rgb(46, 125, 50); border: 1px solid rgb(102, 187, 106);&quot;&gt;...&lt;/li&gt;
-  (Session info: chrome=130.0.6723.58)
-Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
-System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-139-generic&apos;, java.version: &apos;11.0.27&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5fc84977bef941486df8b63c385cf172, clickElement {id=f.AC4A05379FF27374640D75B25AE7E9E4.d.958DD42920B9810D88F0C85E536250AD.e.455}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38773}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:38773/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (5fc84977bef941486df8b63c385cf172)] -&gt; xpath: //*[text()=&apos;Quotation Management&apos;]]
-Session ID: 5fc84977bef941486df8b63c385cf172
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at commonObjects.SidePages.openQuotationManagementPage(SidePages.java:144)
-	at quotationManagementTests.QuotationMangementTest.viewQuotationDetailsFunction(QuotationMangementTest.java:58)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-failed -->
           <div class="suite-Default_suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">quotationManagementTests.QuotationMangementTest</span>
+              <span class="class-name">stockManagementTests.MarkDeadStockTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="addQuotation">
-                  </a> <!-- addQuotation -->
-                  <span class="method-name">addQuotation</span>
+                  <a name="verifyAddMarkDeadFunctionality">
+                  </a> <!-- verifyAddMarkDeadFunctionality -->
+                  <span class="method-name">verifyAddMarkDeadFunctionality</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="approveQuotation">
-                  </a> <!-- approveQuotation -->
-                  <span class="method-name">approveQuotation</span>
+                  <a name="verifyFilterFunctionality">
+                  </a> <!-- verifyFilterFunctionality -->
+                  <span class="method-name">verifyFilterFunctionality</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="deleteQuotation">
-                  </a> <!-- deleteQuotation -->
-                  <span class="method-name">deleteQuotation</span>
+                  <a name="verifyMarkDeadStock">
+                  </a> <!-- verifyMarkDeadStock -->
+                  <span class="method-name">verifyMarkDeadStock</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyStockSummaryHistory">
+                  </a> <!-- verifyStockSummaryHistory -->
+                  <span class="method-name">verifyStockSummaryHistory</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTheProductInTable">
+                  </a> <!-- verifyTheProductInTable -->
+                  <span class="method-name">verifyTheProductInTable</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -252,7 +184,7 @@ Session ID: 5fc84977bef941486df8b63c385cf172
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse--1030701027/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse-959896872/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -261,7 +193,7 @@ Session ID: 5fc84977bef941486df8b63c385cf172
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;quotationManagementTests.QuotationMangementTest&quot;/&gt;
+      &lt;class name=&quot;stockManagementTests.MarkDeadStockTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -301,28 +233,32 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(4);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'addQuotation')
-data.setCell(0, 2, 'quotationManagementTests.QuotationMangementTest')
-data.setCell(0, 3, 3009);
+data.setCell(0, 1, 'verifyMarkDeadStock')
+data.setCell(0, 2, 'stockManagementTests.MarkDeadStockTest')
+data.setCell(0, 3, 968);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'approveQuotation')
-data.setCell(1, 2, 'quotationManagementTests.QuotationMangementTest')
-data.setCell(1, 3, 1423);
+data.setCell(1, 1, 'verifyAddMarkDeadFunctionality')
+data.setCell(1, 2, 'stockManagementTests.MarkDeadStockTest')
+data.setCell(1, 3, 704);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'viewQuotationDetailsFunction')
-data.setCell(2, 2, 'quotationManagementTests.QuotationMangementTest')
-data.setCell(2, 3, 1188);
+data.setCell(2, 1, 'verifyStockSummaryHistory')
+data.setCell(2, 2, 'stockManagementTests.MarkDeadStockTest')
+data.setCell(2, 3, 651);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'deleteQuotation')
-data.setCell(3, 2, 'quotationManagementTests.QuotationMangementTest')
-data.setCell(3, 3, 1094);
+data.setCell(3, 1, 'verifyFilterFunctionality')
+data.setCell(3, 2, 'stockManagementTests.MarkDeadStockTest')
+data.setCell(3, 3, 563);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'verifyTheProductInTable')
+data.setCell(4, 2, 'stockManagementTests.MarkDeadStockTest')
+data.setCell(4, 3, 169);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 3 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -348,28 +284,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">quotationManagementTests.QuotationMangementTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">stockManagementTests.MarkDeadStockTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">addQuotation</span>
-                <span class="method-start">2671 ms</span>
+                <span class="method-name">verifyMarkDeadStock</span>
+                <span class="method-start">2930 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">viewQuotationDetailsFunction</span>
-                <span class="method-start">5686 ms</span>
+                <span class="method-name">verifyFilterFunctionality</span>
+                <span class="method-start">3911 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">approveQuotation</span>
-                <span class="method-start">6983 ms</span>
+                <span class="method-name">verifyTheProductInTable</span>
+                <span class="method-start">4484 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <span class="method-name">deleteQuotation</span>
-                <span class="method-start">8410 ms</span>
+                <span class="method-name">verifyAddMarkDeadFunctionality</span>
+                <span class="method-start">4655 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">verifyStockSummaryHistory</span>
+                <span class="method-start">5363 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

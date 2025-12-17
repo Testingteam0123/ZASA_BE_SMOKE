@@ -25,6 +25,16 @@ public class StockPage extends BasePage {
 	@FindBy(xpath = "//span[text()='Next']")
 	private WebElement nextButton;
 	
+	@FindBy(xpath="//button//span[text()='Filter']")
+	private WebElement filterBtn;
+	
+	@FindBy(xpath="(//input[@class='accent-[#966AC3]'])[1]")
+	private WebElement bookOption;
+	
+	@FindBy(xpath="//input[contains(@placeholder,'Search')]")
+	private WebElement searchBox;
+
+	
 	
 	public boolean isStockTableDisplayed() {
 		return stockTable.isDisplayed();
@@ -36,6 +46,17 @@ public class StockPage extends BasePage {
 	
 	public void clickNextButton() {
 		nextButton.click();
+	}
+	
+	public void selectBook()
+	{
+		filterBtn.click();	
+		bookOption.click();
+	}
+	
+	public void enterSearch(String product)
+	{
+		searchBox.sendKeys(product);
 	}
 
 }

@@ -42,6 +42,19 @@ public class DiscountCouponPage extends BasePage{
 	private WebElement couopnCreatedMessage;
 	
 	
+	@FindBy(css="[class='font-mono uppercase font-medium']")
+	private WebElement couponText;
+	
+	@FindBy(xpath="//input[@placeholder='Search by Coupon Code']")
+	private WebElement searchBar;
+	
+	@FindBy(xpath="//button//span[text()='Filter']")
+	private WebElement filterBtn;
+	
+	@FindBy(xpath="(//input[@class='accent-[#966AC3]'])[3]")
+	private WebElement selectOption;
+	
+	
 	
 	
 	public void clickDiscountCoupon()
@@ -87,5 +100,22 @@ public class DiscountCouponPage extends BasePage{
 		return couopnCreatedMessage.getText();
 	}
 	
+	
+	public String getCouponText()
+	{
+		wait.visibilityOf(couponText, 3);
+		return couponText.getText();
+	}
+	
+	public void checkSearchBar(String coupon)
+	{
+		searchBar.sendKeys(coupon);
+	}
+	
+	public void selectFilter()
+	{
+		filterBtn.click();	
+		selectOption.click();
+	}
 	
 }

@@ -15,7 +15,31 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class DiscountCouponTest extends BaseTest{
 	
-	@Test
+	
+	
+	@Test(priority = 1)
+	public void verifyFilterFunctionality()
+	{
+		ExtentTest test= ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		DiscountCouponPage dp= new DiscountCouponPage(driver);
+		try {
+			test.info("Opening the Discount coupon page");
+			sp.openDiscountCouponPage();
+			test.info("Checking the filter function");
+			dp.selectFilter();
+			test.pass("Filter has been selected successfully.");
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+		}
+		
+	}
+	
+	
+	@Test(priority = 2)
 	public void verifyAddDiscountCouponFunction()
 	{
 		ExtentTest test= ExtentTestListener.getTest();
@@ -44,5 +68,30 @@ public class DiscountCouponTest extends BaseTest{
 			throw e;
 		}
 	}
+	
+	@Test(priority = 3)
+	public void verifyTheSearchBarFunction()
+	{
+		ExtentTest test= ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		DiscountCouponPage dp= new DiscountCouponPage(driver);
+		try
+		{
+			test.info("Opening the Discount coupon page");
+			sp.openDiscountCouponPage();
+			test.info("Checking the Search Box functionality");
+			
+			String coupon=dp.getCouponText();
+			dp.checkSearchBar(coupon);
+			
+			test.pass("Search box function is working successfully");
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+		}
+	}
+
 
 }
