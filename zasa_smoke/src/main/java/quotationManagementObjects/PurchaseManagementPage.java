@@ -28,7 +28,7 @@ public class PurchaseManagementPage extends BasePage {
 	@FindBy(xpath="//option[text()='CORDOVA']")
 	private WebElement selectCordova;
 	
-	@FindBy(xpath="//option[text()='QO0000019']")
+	@FindBy(xpath="//option[text()='QO0000036']")
 	private WebElement selectQuotation;
 	
 	@FindBy(xpath="//button[text()='SAVE']")
@@ -61,6 +61,23 @@ public class PurchaseManagementPage extends BasePage {
 	@FindBy(xpath="//div[text()='Purchase status updated successfully.']")
 	private WebElement PurchaseStatusUpdatedMessage;
 	
+	
+	@FindBy(xpath="(//button[@class='p-1 rounded cursor-pointer'])[1]")
+    private WebElement actionBtn;
+	
+	@FindBy(xpath="//button[contains(@class,'ring-offset-background')]")
+    private WebElement cancelBtn;
+	
+	@FindBy(xpath="//input[@placeholder='Search by Purchase ID']")
+	private WebElement searchBox;
+	
+	
+	@FindBy(css="[aria-controls='radix-:req:']")
+	private WebElement drodownOption;
+	
+	
+	@FindBy(xpath="(//div[@class='flex justify-start text-left'])[1]")
+	private WebElement purchaseIDText;
 	
 	public void clickAddPurchaseOrder() 
 	{
@@ -104,6 +121,8 @@ public class PurchaseManagementPage extends BasePage {
 		selectPurchaseOrder.click();
 		selectCordova.click();
 		selectQuotation.click();
+//		wait.elementToBeClickable(selectQuotation, 5);
+//		selectQuotation.click();
 		wait.elementToBeClickable(btnSave, 3);
 		btnSave.click();
 	}
@@ -116,6 +135,31 @@ public class PurchaseManagementPage extends BasePage {
 		wait.visibilityOf(enterReason, 3);
 		enterReason.sendKeys(reason);
 		clickSaveReason.click();
+	}
+	
+	public String getQuotationID()
+	{
+		wait.visibilityOf(selectQuotation, 0);
+		return selectQuotation.getText();
+	}
+	
+	public void viewDetails()
+	{
+		actionBtn.click();
+		wait.visibilityOf(cancelBtn, 5);
+		cancelBtn.click();
+		
+	}
+	
+	public void checkSearchBox(String QuotationID)
+	{
+		searchBox.sendKeys(QuotationID);
+	}
+	
+	public String getPurchaseIDText()
+	{
+		wait.visibilityOf(purchaseIDText, 5);
+		return purchaseIDText.getText();
 	}
 
 }

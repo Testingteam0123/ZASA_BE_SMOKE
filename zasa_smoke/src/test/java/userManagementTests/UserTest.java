@@ -54,6 +54,54 @@ public class UserTest extends BaseTest{
 	}
 	
 	@Test(priority = 2)
+	public void verifyFilterFunction()
+	{
+		ExtentTest test= ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		UserPage up= new UserPage(driver);
+		try
+		{
+			test.info("Opening the User Management module");
+			sp.openUserManagement();
+			test.info("Checking the Filter function to select a school");
+			up.selectSchool();
+			test.pass("Selected a school from the filter option is working Successfully");
+			
+			
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+		}
+	}
+	
+	
+	@Test(priority = 3)
+	public void verifySearchBoxFuntion()
+	{
+		ExtentTest test= ExtentTestListener.getTest();
+		SidePages sp= new SidePages(driver);
+		UserPage up= new UserPage(driver);
+		try
+		{
+			test.info("Opening the User Management module");
+			sp.openUserManagement();
+			test.info("Checking the Search box function");
+			up.searchUser(name);
+			test.pass("Search function is working Successfully");
+			
+			
+		}
+		catch(Exception e)
+		{
+			test.fail("Failed"+e.getMessage());
+			throw e;
+		}
+	}
+	
+	
+	@Test(priority = 4)
 	public void verifyEditFuntion()
 	{
 		ExtentTest test= ExtentTestListener.getTest();
@@ -64,7 +112,6 @@ public class UserTest extends BaseTest{
 			test.info("Opening the User Management module");
 			sp.openUserManagement();
 			test.info("Checking the Edit user Management function");
-			up.searchUser(name);
 			up.editUser(name);
 			
 			String actualMessage=up.getUpdatedMessage();
@@ -80,7 +127,7 @@ public class UserTest extends BaseTest{
 		}
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 5)
 	public void verifyDeleteFunction()
 	{
 		ExtentTest test= ExtentTestListener.getTest();
@@ -91,7 +138,6 @@ public class UserTest extends BaseTest{
 			test.info("Opening the User Management module");
 			sp.openUserManagement();
 			test.info("Checking the Delete user Management function");
-			//up.searchUser(name);
 			up.deleteUser();
 			
 			String actualMessage=up.getDeletedMessage();

@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="settingsTests.DiscountCouponTest">
+      <class name="quotationManagementTests.QuotationMangementTest">
         <methods>
-          <include name="verifyAddDiscountCouponFunction"/>
-          <include name="verifyTheSearchBarFunction"/>
+          <include name="approveQuotation"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- settingsTests.DiscountCouponTest -->
+      </class> <!-- quotationManagementTests.QuotationMangementTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

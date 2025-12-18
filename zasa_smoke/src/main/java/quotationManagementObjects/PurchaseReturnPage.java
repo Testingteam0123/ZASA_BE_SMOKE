@@ -28,7 +28,7 @@ public class PurchaseReturnPage extends BasePage {
 	@FindBy(xpath="//input[@type='date']")
 	private WebElement datePicker;
 	
-	@FindBy(xpath="//option[text()='PO0000011']")
+	@FindBy(xpath="//option[text()='DPR0000030']")
 	private WebElement selectPurchase;
 	
 	@FindBy(css="[placeholder='Search with Product Name or Barcode']")
@@ -43,7 +43,18 @@ public class PurchaseReturnPage extends BasePage {
 	@FindBy(xpath="//div[text()='Purchase Return added Successfully.']")
 	private WebElement purchaseReturnAddedMessage;
 	
+	@FindBy(xpath="//input[@placeholder='Search by Purchase Return ID']")
+	private WebElement searchBox;
 	
+	@FindBy(xpath="(//div[@class='flex justify-start text-left'])[1]")
+	private WebElement purchaseReturnText;
+	
+			
+	@FindBy(xpath="(//button[@class='text-[#454661]  cursor-pointer'])[1]")
+    private WebElement actionBtn;
+	
+	@FindBy(xpath="//button[contains(@class,'ring-offset-background')]")
+    private WebElement cancelBtn;
 	
 	public void clickAddPurchaseReturn() 
 	{
@@ -79,5 +90,23 @@ public class PurchaseReturnPage extends BasePage {
 		return purchaseReturnAddedMessage.getText();
 	}
 	
+	public void checkSearchBox(String purchaseID)
+	{
+		searchBox.sendKeys(purchaseID);
+	}
+	
+	public String getPurchaseReturnText()
+	{
+		wait.visibilityOf(purchaseReturnText, 5);
+		return purchaseReturnText.getText();
+	}
+	
+	public void viewDetails()
+	{
+		actionBtn.click();
+		wait.visibilityOf(cancelBtn, 5);
+		cancelBtn.click();
+		
+	}
 
 }

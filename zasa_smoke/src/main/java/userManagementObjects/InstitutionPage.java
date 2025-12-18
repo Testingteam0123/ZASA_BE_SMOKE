@@ -151,6 +151,7 @@ public class InstitutionPage extends BasePage{
 	
 	public void confirmButton()
 	{
+		wait.elementToBeClickable(btnOk, 5);	
 		btnOk.click();
 	}
 	

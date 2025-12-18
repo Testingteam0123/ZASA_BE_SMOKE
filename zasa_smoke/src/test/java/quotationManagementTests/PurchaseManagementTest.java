@@ -8,6 +8,7 @@ import com.aventstack.extentreports.ExtentTest;
 import baseTest.BaseTest;
 import commonObjects.SidePages;
 import quotationManagementObjects.PurchaseManagementPage;
+import quotationManagementObjects.PurchaseReturnPage;
 
 import org.testng.Assert;
 
@@ -27,6 +28,7 @@ public class PurchaseManagementTest extends BaseTest{
 		sp.openPurchaseManagementPage();
 		test.info("In the Purchase management adding the purchase order");
 		pmp.clickAddPurchaseOrder();
+		
 		pmp.selectPurchaseOrderOption();
 		
 		String purchaseordersuccessmsg=pmp.getPurchaseOrderAddedMessage();
@@ -40,7 +42,7 @@ public class PurchaseManagementTest extends BaseTest{
 		}
 	}
 	
-	@Test(priority=2)
+	@Test(priority=4)
 	public void deletePurchaseOrderTest()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
@@ -63,7 +65,7 @@ public class PurchaseManagementTest extends BaseTest{
 		
 	}
 	
-	@Test(priority=3)
+	//@Test(priority=3)
 	public void approvePurchaseOrderTest()
 	{
 		ExtentTest test = ExtentTestListener.getTest();
@@ -84,6 +86,44 @@ public class PurchaseManagementTest extends BaseTest{
 			test.fail("Failed"+e.getMessage());
 			throw e;
 		}
+	}
+	
+	@Test(priority = 2)
+	public void checkSearchBarFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		PurchaseManagementPage pmp= new PurchaseManagementPage(driver);
+		try {
+		test.info("Opening the Quotation and Purchase module");
+		sp.openPurchaseManagementPage();
+			test.info("Checking the search bar function in Purchase Management");
+			String purchaseID = pmp.getPurchaseIDText();
+			pmp.checkSearchBox(purchaseID);
+			test.pass("Search bar function is working successfully.");
+		} catch (Exception e) {
+			test.fail("Failed" + e.getMessage());
+			throw e;
+		}
+
+	}
+	
+	@Test(priority = 3)
+	public void checkViewDetailsFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		PurchaseManagementPage pmp= new PurchaseManagementPage(driver);
+		try {
+		test.info("Opening the Quotation and Purchase module");
+		sp.openPurchaseManagementPage();
+			test.info("Checking the view details function in Purchase Management");
+			
+			pmp.viewDetails();
+			test.pass("View details function is working successfully.");
+		} catch (Exception e) {
+			test.fail("Failed" + e.getMessage());
+			throw e;
+		}
+
 	}
 	
 

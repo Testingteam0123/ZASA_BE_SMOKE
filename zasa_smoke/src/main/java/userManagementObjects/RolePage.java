@@ -125,6 +125,7 @@ public class RolePage extends BasePage{
 	
 	public void confirmDelete()
 	{
+		wait.elementToBeClickable(btnOk, 5);	
 		btnOk.click();
 	}
 	

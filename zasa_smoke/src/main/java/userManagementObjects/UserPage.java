@@ -5,6 +5,7 @@ import java.util.List;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import commonObjects.BasePage;
 import utilities.WaitHelper;
@@ -67,6 +68,12 @@ public class UserPage extends BasePage{
 	
 	@FindBy(xpath="//button[text()='OK']")
 	WebElement clickOk;
+	
+	@FindBy(xpath="//button//span[text()='Filter']")
+	private WebElement filterBtn;
+	
+	@FindBy(xpath="(//input[@class='accent-[#966AC3]'])[1]")
+	private WebElement schoolOption;
 	
 	public void clickUser()
 	{
@@ -154,7 +161,14 @@ public class UserPage extends BasePage{
 	public void deleteUser()
 	{
 		deleteField.click();
+		wait.elementToBeClickable(clickOk, 5);		
 		clickOk.click();
+	}
+	
+	public void selectSchool()
+	{
+		filterBtn.click();	
+		schoolOption.click();
 	}
 	
 

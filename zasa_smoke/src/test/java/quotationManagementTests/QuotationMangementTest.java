@@ -45,10 +45,30 @@ public class QuotationMangementTest extends BaseTest {
 		}
 
 	}
+	
+	@Test(priority = 3)
+	public void checkSearchBarFunction() {
+		ExtentTest test = ExtentTestListener.getTest();
+		SidePages sp = new SidePages(driver);
+		QuotationManagementPage qmp = new QuotationManagementPage(driver);
+		try {
+			test.info("Opening the Quotation and Purchase module");
+			sp.openQuotationManagementPage();
+			test.info("Checking the search bar function in Quotation Management");
+			String quotation=qmp.getQuotationText();
+			qmp.checkSearchBox(quotation);
+			test.pass("Search bar function is working successfully.");
+		} catch (Exception e) {
+			test.fail("Failed" + e.getMessage());
+			throw e;
+		}
+
+	}
+	
 
 	
 
-	@Test(priority = 2)
+	@Test(priority = 3)
 	public void viewQuotationDetailsFunction() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -66,7 +86,7 @@ public class QuotationMangementTest extends BaseTest {
 
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 2)
 	public void approveQuotation() throws Exception {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -86,7 +106,7 @@ public class QuotationMangementTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 5)
 	public void deleteQuotation() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);

@@ -76,6 +76,12 @@ public class QuotationManagementPage extends BasePage {
 	@FindBy(xpath="//button[contains(@class,'ring-offset-background')]")
 	private WebElement closeButton;
 	
+	@FindBy(xpath="//input[@placeholder='Search with Quotation ID and Supplier Name']")
+	private WebElement searchBox;
+	
+			
+	@FindBy(xpath="(//div[@class=' font-medium'])[1]")
+	private WebElement quotationText;
 	
 	// ======================
 	// METHODS
@@ -149,6 +155,18 @@ public class QuotationManagementPage extends BasePage {
 	{
 		viewQuotation.click();
 		closeButton.click();
+	}
+	
+	public void checkSearchBox(String Quotation)
+	{
+		searchBox.sendKeys(Quotation);
+	}
+	
+	public String getQuotationText()
+	{
+		wait.visibilityOf(quotationText, 5);
+		return quotationText.getText();
+		
 	}
 
 }
