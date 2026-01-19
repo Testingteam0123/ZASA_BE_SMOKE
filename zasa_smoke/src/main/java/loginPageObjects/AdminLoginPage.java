@@ -23,15 +23,15 @@ public class AdminLoginPage extends BasePage {
 	@FindBy(id = "remember")
 	private WebElement rememberBox;
 
-	@FindBy(xpath = "//button[text()='Login']")
-	private WebElement loginbutton;
+	@FindBy(xpath = "//button//span[text()='Sign In']")
+	private WebElement signInbutton;
 
 	public void loginAdmin(String email,String pass)
 	{
 		emailField.sendKeys(email);
 		passField.sendKeys(pass);
 		rememberBox.click();
-		loginbutton.click();
+		signInbutton.click();
 	}
 
 }

@@ -1,117 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-18T15:39:52 IST" name="Default suite" finished-at="2025-12-18T15:40:12 IST" duration-ms="20438">
+  <suite started-at="2025-12-24T14:11:10 IST" name="Default suite" finished-at="2025-12-24T14:11:20 IST" duration-ms="9779">
     <groups>
     </groups>
-    <test started-at="2025-12-18T15:39:52 IST" name="Default test" finished-at="2025-12-18T15:40:12 IST" duration-ms="20438">
-      <class name="quotationManagementTests.QuotationMangementTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:quotationManagementTests.QuotationMangementTest@15de0b3c]" started-at="2025-12-18T15:39:52 IST" name="setup" finished-at="2025-12-18T15:39:56 IST" duration-ms="3557" status="PASS">
+    <test started-at="2025-12-24T14:11:10 IST" name="Default test" finished-at="2025-12-24T14:11:20 IST" duration-ms="9779">
+      <class name="productManagementTests.ProductsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:productManagementTests.ProductsTest@3c9754d8]" started-at="2025-12-24T14:11:10 IST" name="setup" finished-at="2025-12-24T14:11:13 IST" duration-ms="2662" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addQuotation()[pri:1, instance:quotationManagementTests.QuotationMangementTest@15de0b3c]" started-at="2025-12-18T15:39:56 IST" name="addQuotation" finished-at="2025-12-18T15:40:08 IST" duration-ms="12360" status="PASS">
+        <test-method signature="verifyAddUniformProduct()[pri:0, instance:productManagementTests.ProductsTest@3c9754d8]" started-at="2025-12-24T14:11:13 IST" name="verifyAddUniformProduct" finished-at="2025-12-24T14:11:20 IST" duration-ms="6780" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- addQuotation -->
-        <test-method signature="approveQuotation()[pri:2, instance:quotationManagementTests.QuotationMangementTest@15de0b3c]" started-at="2025-12-18T15:40:08 IST" name="approveQuotation" finished-at="2025-12-18T15:40:09 IST" duration-ms="1210" status="FAIL">
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button class="
-    text-black hover:text-black
-    cursor-default
-  ">...</button> is not clickable at point (577, 74). Other element would receive the click: <li tabindex="0" class="" data-sonner-toast="" data-styled="true" data-mounted="true" data-promise="false" data-swiped="false" data-removed="false" data-visible="true" data-y-position="top" data-x-position="center" data-index="0" data-front="true" data-swiping="false" data-dismissible="true" data-type="success" data-swipe-out="false" data-expanded="false" style="--index: 0; --toasts-before: 0; --z-index: 4; --offset: 0px; --initial-height: 53.5px; background-color: rgb(232, 245, 233); color: rgb(46, 125, 50); border: 1px solid rgb(102, 187, 106);">...</li>
-  (Session info: chrome=130.0.6723.58)
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '11.0.27'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dcaa4e01ca19be24eb88073134b6a0a3, clickElement {id=f.5BC10B6C840819BCED068A7F1DBAF8D6.d.01C24292A0172D88BAF8BC5E7F6DC1C1.e.440}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38523}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:38523/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (dcaa4e01ca19be24eb88073134b6a0a3)] -> xpath: //*[text()='Quotation Management']]
-Session ID: dcaa4e01ca19be24eb88073134b6a0a3]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="
-    text-black hover:text-black
-    cursor-default
-  ">...</button> is not clickable at point (577, 74). Other element would receive the click: <li tabindex="0" class="" data-sonner-toast="" data-styled="true" data-mounted="true" data-promise="false" data-swiped="false" data-removed="false" data-visible="true" data-y-position="top" data-x-position="center" data-index="0" data-front="true" data-swiping="false" data-dismissible="true" data-type="success" data-swipe-out="false" data-expanded="false" style="--index: 0; --toasts-before: 0; --z-index: 4; --offset: 0px; --initial-height: 53.5px; background-color: rgb(232, 245, 233); color: rgb(46, 125, 50); border: 1px solid rgb(102, 187, 106);">...</li>
-  (Session info: chrome=130.0.6723.58)
-Build info: version: '4.38.0', revision: '6b412e825c*'
-System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '11.0.27'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [dcaa4e01ca19be24eb88073134b6a0a3, clickElement {id=f.5BC10B6C840819BCED068A7F1DBAF8D6.d.01C24292A0172D88BAF8BC5E7F6DC1C1.e.440}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.58, chrome: {chromedriverVersion: 130.0.6723.116 (6ac35f94ae3..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:38523}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:38523/devtoo..., se:cdpVersion: 130.0.6723.58, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (dcaa4e01ca19be24eb88073134b6a0a3)] -> xpath: //*[text()='Quotation Management']]
-Session ID: dcaa4e01ca19be24eb88073134b6a0a3
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy15.click(Unknown Source)
-at commonObjects.SidePages.openQuotationManagementPage(SidePages.java:144)
-at quotationManagementTests.QuotationMangementTest.approveQuotation(QuotationMangementTest.java:96)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- approveQuotation -->
-        <test-method signature="checkSearchBarFunction()[pri:3, instance:quotationManagementTests.QuotationMangementTest@15de0b3c]" started-at="2025-12-18T15:40:10 IST" name="checkSearchBarFunction" finished-at="2025-12-18T15:40:10 IST" duration-ms="916" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkSearchBarFunction -->
-        <test-method signature="viewQuotationDetailsFunction()[pri:3, instance:quotationManagementTests.QuotationMangementTest@15de0b3c]" started-at="2025-12-18T15:40:10 IST" name="viewQuotationDetailsFunction" finished-at="2025-12-18T15:40:11 IST" duration-ms="1009" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- viewQuotationDetailsFunction -->
-        <test-method signature="deleteQuotation()[pri:5, instance:quotationManagementTests.QuotationMangementTest@15de0b3c]" started-at="2025-12-18T15:40:11 IST" name="deleteQuotation" finished-at="2025-12-18T15:40:12 IST" duration-ms="931" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteQuotation -->
-      </class> <!-- quotationManagementTests.QuotationMangementTest -->
+        </test-method> <!-- verifyAddUniformProduct -->
+      </class> <!-- productManagementTests.ProductsTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

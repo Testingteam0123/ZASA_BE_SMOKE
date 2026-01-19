@@ -13,11 +13,12 @@ public class salesPage extends BasePage{
 	}
 	
 	@FindBy(xpath="//h1")
-	private WebElement subStoreHeading;
+	private WebElement heading;
 	
-	public String getSubStoreHeading()
+	
+	public String getHeading()
 	{
-		return subStoreHeading.getText();	
+		return heading.getText();	
 	}
 	
 

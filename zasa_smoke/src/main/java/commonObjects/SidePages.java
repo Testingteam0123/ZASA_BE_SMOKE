@@ -99,6 +99,9 @@ public class SidePages extends BasePage {
 	@FindBy(xpath="//button//span[text()='Stocks']")
 	private WebElement btnStockss;
 	
+	@FindBy(xpath="//button//span[text()='Sales']")
+	private WebElement btnSales;
+	
 	@FindBy(xpath="(//button[text()='Sub Store Stock Report'])[1]")
 	private WebElement btnSubStoreReport;
 	
@@ -111,7 +114,50 @@ public class SidePages extends BasePage {
 	@FindBy(xpath="(//button[text()='Stock Allotment Report'])[1]")
 	private WebElement btnStockAllotmentReport;
 	
+	@FindBy(xpath="(//button[text()='Sales Report'])[1]")
+	private WebElement btnSalesReport;
 	
+	@FindBy(xpath="(//button[text()='Account Report'])[1]")
+	private WebElement btnAccountReport;
+	
+	@FindBy(xpath="(//button[text()='Sales By Customer'])[1]")
+	private WebElement btnSalesByCustomer;
+	
+	@FindBy(xpath="(//button[text()='Sales By Product'])[1]")
+	private WebElement btnSalesByProduct;
+	
+	@FindBy(xpath="(//button[text()='Sales By Student'])[1]")
+	private WebElement btnSalesByStudent;
+	
+	@FindBy(xpath="(//button[text()='Online Payment Report'])[1]")
+	private WebElement btnOnlinePaymentReport;
+	
+	@FindBy(xpath="(//button[text()='Status Wise Order Report'])[1]")
+	private WebElement btnStatusWiseOrderReport;
+	
+	@FindBy(xpath="(//button[text()='Classroom Delivery Report'])[1]")
+	private WebElement btnClassroomDelivaryReport;
+	
+	@FindBy(xpath="(//button[text()='Exchange Report'])[1]")
+	private WebElement btnExchangeReport;
+	
+	@FindBy(xpath="(//button[text()='Return Report'])[1]")
+	private WebElement btnReturnReport;
+	
+	@FindBy(xpath="(//button[text()='Collect Order Report'])[1]")
+	private WebElement btnCollectOrderReport;
+	
+	@FindBy(xpath="(//button[text()='Cancel Order Report'])[1]")
+	private WebElement btnCancelOrderReport;
+	
+	@FindBy(xpath="(//button[text()='Coupon Report'])[1]")
+	private WebElement btnCouponReport;
+	
+	@FindBy(xpath="(//button[text()='Kit Report'])[1]")
+	private WebElement btnKitReport;
+	
+	
+
 	
 	
 	
@@ -237,31 +283,132 @@ public class SidePages extends BasePage {
 		btnUserManagement.click();
 	}
 	
+	
 	public void openSubStoreStockReport()
 	{
-		btnReports.click();
-		btnStockss.click();
+		openStocksMenuIfNeeded();
 		btnSubStoreReport.click();
 	}
 	
+	
+	
 	public void openMainStoreStockReport()
 	{
-		btnReports.click();
-		btnStockss.click();
+		openStocksMenuIfNeeded();
 		btnMainStoreReport.click();
 	}
 	
 	public void openCategoryWiseReport()
 	{
-		btnReports.click();
-		btnStockss.click();
+		openStocksMenuIfNeeded();
 		btnCategoryWiseReport.click();
 	}
 	
 	public void openStockAllotmentReport()
 	{
-		btnReports.click();
-		btnStockss.click();
+		openStocksMenuIfNeeded();
 		btnStockAllotmentReport.click();
 	}
+	
+	public void openSalesReport()
+	{
+		openSalesMenuIfNeeded();
+		btnSalesReport.click();
+	}
+	
+	public void openAccountReport()
+	{
+		openSalesMenuIfNeeded();
+		btnAccountReport.click();
+	}
+	
+	public void openSalesByCustomer()
+	{
+		openSalesMenuIfNeeded();
+		btnSalesByCustomer.click();
+	}
+	
+	public void openSalesByProduct()
+	{
+		openSalesMenuIfNeeded();
+		btnSalesByProduct.click();
+	}
+	
+	public void openSalesByStudent()
+	{
+		openSalesMenuIfNeeded();
+		btnSalesByStudent.click();
+	}
+	
+	public void openOnlinePaymentReport()
+	{
+		openSalesMenuIfNeeded();
+		btnOnlinePaymentReport.click();
+	}
+	
+	public void openStatusWiseOrderReport()
+	{
+		openSalesMenuIfNeeded();
+		btnStatusWiseOrderReport.click();
+	}
+	
+	public void openClassroomDeliveryReport()
+	{
+		openSalesMenuIfNeeded();
+		btnClassroomDelivaryReport.click();
+	}
+	
+	public void openExchangeReport()
+	{
+		openSalesMenuIfNeeded();
+		btnExchangeReport.click();
+	}
+	
+	public void openReturnReport()
+	{
+		openSalesMenuIfNeeded();
+		btnReturnReport.click();
+	}
+	
+	public void openCollectOrderReport()
+	{
+		openSalesMenuIfNeeded();
+		btnCollectOrderReport.click();
+	}
+	
+	public void openCancelOrderReport()
+	{
+		openSalesMenuIfNeeded();
+		btnCancelOrderReport.click();
+	}
+	
+	public void openCouponReport()
+	{
+		openSalesMenuIfNeeded();
+		btnCouponReport.click();
+	}
+	
+	public void openKitReport()
+	{
+		openSalesMenuIfNeeded();
+		btnKitReport.click();
+	}	
+	
+	public void openStocksMenuIfNeeded() {
+	    if (!btnSubStoreReport.isDisplayed()) {
+	        btnReports.click();
+	        btnStockss.click();
+	    }
+	}
+	
+	public void openSalesMenuIfNeeded()
+	{
+		if(!btnSalesReport.isDisplayed())
+		{
+			btnReports.click();
+			btnSales.click();	
+		}
+	}
+	
+	
 }

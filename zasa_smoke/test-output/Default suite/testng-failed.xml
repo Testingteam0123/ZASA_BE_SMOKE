@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="quotationManagementTests.QuotationMangementTest">
+      <class name="reportsTests.StocksTests">
         <methods>
-          <include name="approveQuotation"/>
+          <include name="verifyTheMainStoreStockReport"/>
+          <include name="verifyTheStockAllotmentReport"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- quotationManagementTests.QuotationMangementTest -->
+      </class> <!-- reportsTests.StocksTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

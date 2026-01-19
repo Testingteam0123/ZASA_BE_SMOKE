@@ -15,7 +15,7 @@ import utilities.ExtentTestListener;
 @Listeners(ExtentTestListener.class)
 public class ProductsTest extends BaseTest {
 
-	// @Test
+	@Test
 	public void verifyAddUniformProduct() {
 
 		ExtentTest test = ExtentTestListener.getTest();
@@ -37,7 +37,7 @@ public class ProductsTest extends BaseTest {
 	}
 	
 
-	@Test(priority = 1)
+	//@Test(priority = 1)
 	public void verifyAddStationaryProduct() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -59,7 +59,7 @@ public class ProductsTest extends BaseTest {
 		// verifyDeleteProduct();
 	}
 
-	@Test(priority = 2)
+	//@Test(priority = 2)
 	public void verifyEditProduct() throws InterruptedException {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -82,7 +82,7 @@ public class ProductsTest extends BaseTest {
 
 	
 
-	@Test(priority = 3)
+//@Test(priority = 3)
 	public void verifyStatusChangeFunction() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -106,7 +106,7 @@ public class ProductsTest extends BaseTest {
 
 	}
 
-	@Test(priority = 4)
+	//@Test(priority = 4)
 	public void verifySearchFunction() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -127,7 +127,7 @@ public class ProductsTest extends BaseTest {
 
 	}
 	
-	@Test(priority = 5)
+	//@Test(priority = 5)
 	public void checkThePolicyUpdateFunction() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -148,7 +148,7 @@ public class ProductsTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 6)
+	//@Test(priority = 6)
 	public void verifyPreviewProduct() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -165,7 +165,7 @@ public class ProductsTest extends BaseTest {
 		}
 	}
 
-	@Test(priority = 7)
+	//@Test(priority = 7)
 	public void verifyDeleteProduct() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -187,7 +187,7 @@ public class ProductsTest extends BaseTest {
 	}
 	
 	
-	@Test(priority = 8)
+	//@Test(priority = 8)
 	public void verifyTheExportfunctionOfPDF() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
@@ -206,7 +206,7 @@ public class ProductsTest extends BaseTest {
 	}
 	
 	
-	@Test(priority = 9)
+	//@Test(priority = 9)
 	public void verifyTheExportfunctionOfCSV() {
 		ExtentTest test = ExtentTestListener.getTest();
 		SidePages sp = new SidePages(driver);
