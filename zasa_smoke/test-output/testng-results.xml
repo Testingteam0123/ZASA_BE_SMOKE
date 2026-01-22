@@ -1,21 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-12-24T14:11:10 IST" name="Default suite" finished-at="2025-12-24T14:11:20 IST" duration-ms="9779">
+  <suite started-at="2026-01-22T17:11:38 IST" name="Default suite" finished-at="2026-01-22T17:11:45 IST" duration-ms="6908">
     <groups>
     </groups>
-    <test started-at="2025-12-24T14:11:10 IST" name="Default test" finished-at="2025-12-24T14:11:20 IST" duration-ms="9779">
-      <class name="productManagementTests.ProductsTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:productManagementTests.ProductsTest@3c9754d8]" started-at="2025-12-24T14:11:10 IST" name="setup" finished-at="2025-12-24T14:11:13 IST" duration-ms="2662" status="PASS">
+    <test started-at="2026-01-22T17:11:38 IST" name="Default test" finished-at="2026-01-22T17:11:45 IST" duration-ms="6908">
+      <class name="settingsTests.DiscountCouponTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:settingsTests.DiscountCouponTest@6ed3ccb2]" started-at="2026-01-22T17:11:38 IST" name="setup" finished-at="2026-01-22T17:11:42 IST" duration-ms="3274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyAddUniformProduct()[pri:0, instance:productManagementTests.ProductsTest@3c9754d8]" started-at="2025-12-24T14:11:13 IST" name="verifyAddUniformProduct" finished-at="2025-12-24T14:11:20 IST" duration-ms="6780" status="PASS">
+        <test-method signature="verifyFilterFunctionality()[pri:1, instance:settingsTests.DiscountCouponTest@6ed3ccb2]" started-at="2026-01-22T17:11:42 IST" name="verifyFilterFunctionality" finished-at="2026-01-22T17:11:43 IST" duration-ms="1343" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyAddUniformProduct -->
-      </class> <!-- productManagementTests.ProductsTest -->
+        </test-method> <!-- verifyFilterFunctionality -->
+        <test-method signature="verifyAddDiscountCouponFunction()[pri:2, instance:settingsTests.DiscountCouponTest@6ed3ccb2]" started-at="2026-01-22T17:11:43 IST" name="verifyAddDiscountCouponFunction" finished-at="2026-01-22T17:11:44 IST" duration-ms="1277" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button class="flex items-center w-full px-3 py-2 text-left rounded-md text-sm transition-all duration-200 group cursor-pointer bg-white text-[#966AC3] font-medium shadow-sm border border-gray-200">...</button> is not clickable at point (126, 542). Other element would receive the click: <div class="space-y-1">...</div>
+  (Session info: chrome=143.0.7499.192)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '11.0.27'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00103c4f87c6aed74a9a9275d1bddf7d, clickElement {id=f.9DE281AD1E67DBE182FD40243F1F297D.d.8D08999B5AFAE78DDE057239699E4E20.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45835}, goog:processID: 8490, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45835/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (00103c4f87c6aed74a9a9275d1bddf7d)] -> xpath: (//button[text()='Discount Coupon'])[1]]
+Session ID: 00103c4f87c6aed74a9a9275d1bddf7d]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="flex items-center w-full px-3 py-2 text-left rounded-md text-sm transition-all duration-200 group cursor-pointer bg-white text-[#966AC3] font-medium shadow-sm border border-gray-200">...</button> is not clickable at point (126, 542). Other element would receive the click: <div class="space-y-1">...</div>
+  (Session info: chrome=143.0.7499.192)
+Build info: version: '4.38.0', revision: '6b412e825c*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '5.15.0-139-generic', java.version: '11.0.27'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [00103c4f87c6aed74a9a9275d1bddf7d, clickElement {id=f.9DE281AD1E67DBE182FD40243F1F297D.d.8D08999B5AFAE78DDE057239699E4E20.e.34}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45835}, goog:processID: 8490, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45835/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (00103c4f87c6aed74a9a9275d1bddf7d)] -> xpath: (//button[text()='Discount Coupon'])[1]]
+Session ID: 00103c4f87c6aed74a9a9275d1bddf7d
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy15.click(Unknown Source)
+at commonObjects.SidePages.openDiscountCouponPage(SidePages.java:260)
+at settingsTests.DiscountCouponTest.verifyAddDiscountCouponFunction(DiscountCouponTest.java:51)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAddDiscountCouponFunction -->
+        <test-method signature="verifyTheSearchBarFunction()[pri:3, instance:settingsTests.DiscountCouponTest@6ed3ccb2]" started-at="2026-01-22T17:11:44 IST" name="verifyTheSearchBarFunction" finished-at="2026-01-22T17:11:45 IST" duration-ms="465" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTheSearchBarFunction -->
+      </class> <!-- settingsTests.DiscountCouponTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

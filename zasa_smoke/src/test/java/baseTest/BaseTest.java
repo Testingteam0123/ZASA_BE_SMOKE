@@ -41,7 +41,7 @@ public class BaseTest {
 
 		if (browser.equals("chrome")) {
 			ChromeOptions options = new ChromeOptions();
-			//options.addArguments("--incognito");
+			options.addArguments("--incognito");
 			driver = new ChromeDriver(options);
 		} else if (browser.equals("edge")) {
 			driver = new EdgeDriver();
