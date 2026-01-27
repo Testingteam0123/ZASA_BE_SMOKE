@@ -50,7 +50,7 @@ public class ProductPage extends BasePage {
 	@FindBy(id = "price")
 	private WebElement txtPurchaseprice;
 
-	@FindBy(id = "sellingprice")
+	@FindBy(id ="sellingprice")
 	private WebElement txtSellingPrice;
 
 	@FindBy(css = "[aria-haspopup='dialog']")
@@ -124,11 +124,14 @@ public class ProductPage extends BasePage {
 
 	@FindBy(xpath = "//option[text()='Core Uniform']")
 	private WebElement selectStockCategory;
-
-	@FindBy(xpath = "//option[text()='Middle']")
-	private WebElement selectGrade;;
-
+	
 	@FindBy(xpath = "(//button[@aria-haspopup='dialog'])[2]")
+	private WebElement gradeField;
+
+	@FindBy(xpath="(//div[contains(@class,'cursor-pointer px-2')])[3]")			
+	private WebElement middleGrade;
+
+	@FindBy(xpath = "(//button[@aria-haspopup='dialog'])[3]")
 	private WebElement clickInstitutionDropdown;
 
 	@FindBy(xpath = "//div[contains(@class,'cursor-pointer')]//span[text()='New Indian Model School, Dubai']")
@@ -263,8 +266,8 @@ public class ProductPage extends BasePage {
 		selectSize.click();
 		selectGender.click();
 		selectStockCategory.click();
-		selectGrade.click();
-
+		gradeField.click();
+		middleGrade.click();
 		txtPurchaseprice.sendKeys(price);
 		txtSellingPrice.sendKeys(price);
 		clickInstitutionDropdown.click();

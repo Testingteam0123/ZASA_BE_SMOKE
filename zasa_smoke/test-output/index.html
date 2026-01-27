@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -104,6 +104,11 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="settingsTests.DiscountCouponTest" class="method navigator-link" hash-for-method="verifyAddDiscountCouponFunction">verifyAddDiscountCouponFunction</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Default_suite" title="settingsTests.DiscountCouponTest" class="method navigator-link" hash-for-method="verifyTheSearchBarFunction">verifyTheSearchBarFunction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -118,11 +123,6 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Default_suite" title="settingsTests.DiscountCouponTest" class="method navigator-link" hash-for-method="verifyFilterFunctionality">verifyFilterFunctionality</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="settingsTests.DiscountCouponTest" class="method navigator-link" hash-for-method="verifyTheSearchBarFunction">verifyTheSearchBarFunction</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Default_suite -->
@@ -148,15 +148,81 @@
                   <a name="verifyAddDiscountCouponFunction">
                   </a> <!-- verifyAddDiscountCouponFunction -->
                   <span class="method-name">verifyAddDiscountCouponFunction</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;flex items-center w-full px-3 py-2 text-left rounded-md text-sm transition-all duration-200 group cursor-pointer bg-white text-[#966AC3] font-medium shadow-sm border border-gray-200&quot;&gt;...&lt;/button&gt; is not clickable at point (126, 542). Other element would receive the click: &lt;div class=&quot;space-y-1&quot;&gt;...&lt;/div&gt;
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//option[text()=&apos;New Indian Model School, Dubai&apos;]&quot;}
+  (Session info: chrome=143.0.7499.192)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
+System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-139-generic&apos;, java.version: &apos;11.0.27&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [261be2ab77ffbc33ce28d56c2ee8cc1e, findElement {value=//option[text()=&apos;New Indian Model School, Dubai&apos;], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40459}, goog:processID: 9900, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40459/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 261be2ab77ffbc33ce28d56c2ee8cc1e
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:557)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:380)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:374)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy15.click(Unknown Source)
+	at settingsObjects.DiscountCouponPage.selectInstitution(DiscountCouponPage.java:67)
+	at settingsTests.DiscountCouponTest.verifyAddDiscountCouponFunction(DiscountCouponTest.java:54)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="verifyTheSearchBarFunction">
+                  </a> <!-- verifyTheSearchBarFunction -->
+                  <span class="method-name">verifyTheSearchBarFunction</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (82, 522). Other element would receive the click: &lt;div data-state=&quot;open&quot; data-slot=&quot;sheet-overlay&quot; class=&quot;data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-40 bg-black/50&quot; data-aria-hidden=&quot;true&quot; aria-hidden=&quot;true&quot; style=&quot;pointer-events: auto;&quot;&gt;&lt;/div&gt;
   (Session info: chrome=143.0.7499.192)
 Build info: version: &apos;4.38.0&apos;, revision: &apos;6b412e825c*&apos;
 System info: os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.15.0-139-generic&apos;, java.version: &apos;11.0.27&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [00103c4f87c6aed74a9a9275d1bddf7d, clickElement {id=f.9DE281AD1E67DBE182FD40243F1F297D.d.8D08999B5AFAE78DDE057239699E4E20.e.34}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:45835}, goog:processID: 8490, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:45835/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on linux (00103c4f87c6aed74a9a9275d1bddf7d)] -&gt; xpath: (//button[text()=&apos;Discount Coupon&apos;])[1]]
-Session ID: 00103c4f87c6aed74a9a9275d1bddf7d
+Command: [261be2ab77ffbc33ce28d56c2ee8cc1e, clickElement {id=f.1B2BF005E93E0DB95E27D3D1D1FB843D.d.7C2EA777953F4C52787A8CC38C079380.e.25}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 143.0.7499.192, chrome: {chromedriverVersion: 143.0.7499.192 (be2c1f4fd45..., userDataDir: /tmp/.org.chromium.Chromium...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:40459}, goog:processID: 9900, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:cdp: ws://localhost:40459/devtoo..., se:cdpVersion: 143.0.7499.192, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on linux (261be2ab77ffbc33ce28d56c2ee8cc1e)] -&gt; xpath: //span[text()=&apos;Settings&apos;]]
+Session ID: 261be2ab77ffbc33ce28d56c2ee8cc1e
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -176,8 +242,8 @@ Session ID: 00103c4f87c6aed74a9a9275d1bddf7d
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
 	at com.sun.proxy.$Proxy15.click(Unknown Source)
-	at commonObjects.SidePages.openDiscountCouponPage(SidePages.java:260)
-	at settingsTests.DiscountCouponTest.verifyAddDiscountCouponFunction(DiscountCouponTest.java:51)
+	at commonObjects.SidePages.openDiscountCouponPage(SidePages.java:259)
+	at settingsTests.DiscountCouponTest.verifyTheSearchBarFunction(DiscountCouponTest.java:81)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -225,19 +291,12 @@ Session ID: 00103c4f87c6aed74a9a9275d1bddf7d
                   <span class="method-name">verifyFilterFunctionality</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="verifyTheSearchBarFunction">
-                  </a> <!-- verifyTheSearchBarFunction -->
-                  <span class="method-name">verifyTheSearchBarFunction</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Default_suite-class-passed -->
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-1820122750/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--614730941/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -288,22 +347,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'verifyFilterFunctionality')
+data.setCell(0, 1, 'verifyAddDiscountCouponFunction')
 data.setCell(0, 2, 'settingsTests.DiscountCouponTest')
-data.setCell(0, 3, 1343);
+data.setCell(0, 3, 5473);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'verifyAddDiscountCouponFunction')
+data.setCell(1, 1, 'verifyFilterFunctionality')
 data.setCell(1, 2, 'settingsTests.DiscountCouponTest')
-data.setCell(1, 3, 1277);
+data.setCell(1, 3, 1282);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'verifyTheSearchBarFunction')
 data.setCell(2, 2, 'settingsTests.DiscountCouponTest')
-data.setCell(2, 3, 465);
+data.setCell(2, 3, 1077);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 3 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -336,17 +395,19 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">verifyFilterFunctionality</span>
-                <span class="method-start">3302 ms</span>
+                <span class="method-start">3002 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">verifyAddDiscountCouponFunction</span>
-                <span class="method-start">4655 ms</span>
+                <span class="method-start">4292 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">verifyTheSearchBarFunction</span>
-                <span class="method-start">6050 ms</span>
+                <span class="method-start">9880 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
